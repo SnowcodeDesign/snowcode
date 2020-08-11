@@ -8,7 +8,6 @@ const useStyles = makeStyles((theme) => ({
     background: theme.palette.primary.main,
   },
   rootContainer: {
-    minWidth: '444px',
     width: '100%',
     maxWidth: '900px',
     marginLeft: 'auto',

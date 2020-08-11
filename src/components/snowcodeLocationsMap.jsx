@@ -7,11 +7,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     minHeight: '400px',
     padding: 20,
-    maxWidth: '900px',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    background: theme.palette.primary.main
   },
   rootTable: {
+    maxWidth: '900px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
     tableLayout: 'fixed',
   },
   cell: {

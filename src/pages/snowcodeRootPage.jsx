@@ -11,7 +11,9 @@ import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 export default function SnowcodeRootPage({ theme }) {
 
   const appBarComponent = (
-    <SnowcodeAppBar />
+    <SnowcodeAppBar
+      theme={ theme }
+    />
   );
 
   const landingJumbotronComponent = (

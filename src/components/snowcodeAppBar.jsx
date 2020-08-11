@@ -4,6 +4,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
@@ -19,7 +22,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   toolbar: {
-    minWidth: '460px',
     width: '100%',
     maxWidth: '1000px',
     marginLeft: 'auto',
@@ -36,10 +38,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobile: {
-    display: 'none'
+    [theme.breakpoints.up('sm')]: {
+      display: 'none',
+    }
   },
 
   desktop: {
+    display: 'none',
+
+    [theme.breakpoints.up('sm')]: {
+      display: 'block',
+    }
   },
 
   toolbarButton: {
@@ -48,13 +57,39 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeAppBar() {
+export default function SnowcodeAppBar({ theme, on }) {
   const classes = useStyles();
 
+  const [mobileMenuAnchor, setMobileMenuAnchor] = React.useState(null);
+
+  const handleMobileMenuButtonClick = (event) => {
+    setMobileMenuAnchor(event.currentTarget);
+  }
+
+  const handleMobileMenuCloseClick = (event) => {
+    setMobileMenuAnchor(null);
+  }
+
   const mobileToolbar = (
-    <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu">
-      <MenuIcon />
-    </IconButton>
+    <div>
+      <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu" onClick={ handleMobileMenuButtonClick }>
+        <MenuIcon />
+      </IconButton>
+
+      <Menu
+        anchorEl={mobileMenuAnchor}
+        keepMounted
+        open={Boolean(mobileMenuAnchor)}
+        onClose={handleMobileMenuCloseClick}
+      >
+        <MenuItem onClick={handleMobileMenuCloseClick}>Pricing</MenuItem>
+        <MenuItem onClick={handleMobileMenuCloseClick}>Contact Us</MenuItem>
+        <MenuItem style={{
+          background: theme.palette.secondary.main,
+          color: theme.palette.secondary.contrastText
+        }} onClick={handleMobileMenuCloseClick}>Buy Now</MenuItem>
+      </Menu>
+    </div>
   );
 
   const desktopToolbar = (
