@@ -84,7 +84,7 @@ export default function SnowcodeFeaturesGrid({ theme }) {
   const gridCells = [{
     image: <CodeIcon />,
     title: 'Full-stack development',
-    body: 'From iOS to Android, desktop websites to progessive web apps, we offer a competitive range of frontend and backend tech.',
+    body: 'From iOS to Android, desktop websites to progessive web apps, we offer a competitive range of frontend and backend technology.',
   }, {
     image: (
       <BrushIcon />
@@ -102,7 +102,7 @@ export default function SnowcodeFeaturesGrid({ theme }) {
       <ReceiptIcon />
     ),
     title: 'Flexible contracts',
-    body: 'We have a personal, 1-on-1 business philosophy. Instead of one-offs, we prefer long-term roles that fit your specific needs.',
+    body: 'We have a personal, 1-on-1 business philosophy. Instead of one-offs, we prefer long-term contracts that fit your specific needs.',
   }];
   const gridCellComponents = gridCells.map(cell => {
     return (
