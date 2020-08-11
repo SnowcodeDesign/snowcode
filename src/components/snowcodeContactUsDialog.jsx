@@ -81,7 +81,7 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick, onSendEmai
 
             <div className={classes.button}>
               
-              <a className="mailtoui" href="mailto:snowcodedesign@gmail.com">
+              <a className="mailtoui" href="mailto:snowcodedesign@gmail.com" style={{textDecoration: 'none'}}>
                 <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ onSendEmailButtonClick }>
 
                   Send Email
