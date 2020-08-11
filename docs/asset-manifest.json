@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.da99d349.chunk.css",
+    "main.js": "/static/js/main.1926e920.chunk.js",
+    "main.js.map": "/static/js/main.1926e920.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.b17d2dab.js",
+    "runtime-main.js.map": "/static/js/runtime-main.b17d2dab.js.map",
+    "static/js/2.b19de31c.chunk.js": "/static/js/2.b19de31c.chunk.js",
+    "static/js/2.b19de31c.chunk.js.map": "/static/js/2.b19de31c.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.071ea6503be94dd4e0d97316b4189166.js": "/precache-manifest.071ea6503be94dd4e0d97316b4189166.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.da99d349.chunk.css.map": "/static/css/main.da99d349.chunk.css.map",
+    "static/js/2.b19de31c.chunk.js.LICENSE.txt": "/static/js/2.b19de31c.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "/static/media/Lato-Regular.2d36b1a9.ttf",
+    "static/media/Logo_of_Rochester,_New_York.svg": "/static/media/Logo_of_Rochester,_New_York.cc32b90e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b17d2dab.js",
+    "static/js/2.b19de31c.chunk.js",
+    "static/css/main.da99d349.chunk.css",
+    "static/js/main.1926e920.chunk.js"
+  ]
+}
