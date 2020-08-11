@@ -2,10 +2,33 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
+import snowcodeHeader from '../img/header-2.png';
+
 const useStyles = makeStyles((theme) => ({
   root: {
-    padding: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+    paddingTop: 100,
+    paddingBottom: 100,
+
     background: theme.palette.primary.main,
+
+    backgroundImage: `url(${snowcodeHeader})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: theme.palette.primary.main,
+
+    backgroundSize: 'contain',
+    backgroundPosition: 'center',
+    // [theme.breakpoints.up(1130)]: {
+    //   backgroundSize: 'contain',
+    //   backgroundPosition: 'right',
+    // },
+    [theme.breakpoints.down(883)]: {
+      backgroundSize: 'cover',
+    },
+    [theme.breakpoints.up(883)]: {
+      backgroundPosition: 'right',
+    },
   },
   rootContainer: {
     width: '100%',
@@ -16,11 +39,14 @@ const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: '2rem',
     fontWeight: 800,
+    lineHeight: 1,
+    textShadow: '0px 0px 2px rgba(0,0,0,0.2)'
   },
   body: {
     fontSize: '1.0rem',
     opacity: 0.6,
-    marginTop: 8
+    marginTop: 8,
+    textShadow: '0px 0px 2px rgba(0,0,0,0.2)'
   },
   buttons: {
     marginTop: 16,
@@ -32,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeLandingJumbotron({ theme }) {
+export default function SnowcodeLandingJumbotron({ theme, onBuyNowClick, onPricingClick }) {
   const classes = useStyles();
 
   const title = "Bring your work to life ";
@@ -46,29 +72,29 @@ export default function SnowcodeLandingJumbotron({ theme }) {
   );
 
   const primaryButton = "Buy Now";
-  const secondaryButton = "Contact Us";
+  const secondaryButton = "See Pricing";
 
   return (
     <div className={classes.root}>
       <div className={classes.rootContainer}>
-      <div className={classes.title}>
-        { title }<span style={{ color: theme.palette.secondary.main }}>{ titleSuffix }</span>
-      </div>
+        <div className={classes.title}>
+          { title }<span style={{ color: theme.palette.secondary.main }}>{ titleSuffix }</span>
+        </div>
 
-      <div className={classes.body}>
-        { body }
-      </div>
+        <div className={classes.body}>
+          { body }
+        </div>
 
-      <div className={classes.buttons}>
-        <Button color="secondary" variant="contained">
-          { primaryButton }
-        </Button>
+        <div className={classes.buttons}>
+          <Button color="secondary" variant="contained" onClick={onBuyNowClick}>
+            { primaryButton }
+          </Button>
 
-        <Button variant="outlined">
-          { secondaryButton }
-        </Button>
+          <Button variant="outlined" onClick={onPricingClick}>
+            { secondaryButton }
+          </Button>
 
-      </div>
+        </div>
       </div>
     </div>
   );

@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeWhatsIncludedTable({ }) {
+export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
   const classes = useStyles();
 
   const features = [ {
@@ -62,11 +62,11 @@ export default function SnowcodeWhatsIncludedTable({ }) {
     image: <MicIcon/>,
     text: 'Audio Engineering'
   }, {
-    image: <StorageIcon/>,
-    text: 'Database Management'
-  }, {
     image: <BugReportIcon/>,
     text: 'Production Testing'
+  }, {
+    image: <StorageIcon/>,
+    text: 'Database Management'
   }, {
     image: <TwitterIcon/>,
     text: 'Brand & Social Media Design'
@@ -115,7 +115,9 @@ export default function SnowcodeWhatsIncludedTable({ }) {
               <div>
                 What's Included
                 <div className={classes.rootTextCellButton}>
-                  <Button variant="outlined" color="secondary">Contact Us</Button>
+                  <Button variant="outlined" color="secondary" onClick={onContactUsClick}>
+                    Contact Us
+                  </Button>
                 </div>
               </div>
             </td>

@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   },
   headerBody: {
     fontSize: '0.9rem',
-    opacity: 0.6,
+    color: 'rgba(0,0,0,0.5)',
     marginTop: 8,
     maxWidth: '700px',
     marginLeft: 'auto',
@@ -67,7 +67,11 @@ export default function SnowcodeFeaturesGrid({ theme }) {
 
   const headerTitle = "Let us design, develop, and deploy ";
   const headerTitleSuffix = "your next big idea";
-  const headerBody = "Snowcode is a contract software development and design firm with a pool of artists and creatives. We create high-end software, video production, and graphic design for the lowest market price.";
+  const headerBody = (
+    <span>
+      <b>Snowcode</b> {' is a contract software development and design firm with a pool of artists and creatives. We create high-end software, video production, and graphic design for the lowest market price.'}
+    </span>
+  );
 
   const headerComponent = (
     <div className={classes.header}>

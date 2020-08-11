@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeAppBar({ theme, on }) {
+export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick }) {
   const classes = useStyles();
 
   const [mobileMenuAnchor, setMobileMenuAnchor] = React.useState(null);
@@ -68,6 +68,16 @@ export default function SnowcodeAppBar({ theme, on }) {
 
   const handleMobileMenuCloseClick = (event) => {
     setMobileMenuAnchor(null);
+  }
+
+  const handlePricingClick = () => {
+    setMobileMenuAnchor(null);
+    onPricingClick();
+  }
+
+  const handleBuyNowClick = () => {
+    setMobileMenuAnchor(null);
+    onBuyNowClick();
   }
 
   const mobileToolbar = (
@@ -82,21 +92,19 @@ export default function SnowcodeAppBar({ theme, on }) {
         open={Boolean(mobileMenuAnchor)}
         onClose={handleMobileMenuCloseClick}
       >
-        <MenuItem onClick={handleMobileMenuCloseClick}>Pricing</MenuItem>
-        <MenuItem onClick={handleMobileMenuCloseClick}>Contact Us</MenuItem>
+        <MenuItem onClick={handlePricingClick}>Pricing</MenuItem>
         <MenuItem style={{
           background: theme.palette.secondary.main,
           color: theme.palette.secondary.contrastText
-        }} onClick={handleMobileMenuCloseClick}>Buy Now</MenuItem>
+        }} onClick={handleBuyNowClick}>Buy Now</MenuItem>
       </Menu>
     </div>
   );
 
   const desktopToolbar = (
     <div>
-      <Button className={classes.toolbarButton}>Pricing <ExpandMoreIcon /></Button>
-      <Button className={classes.toolbarButton}>Contact Us <ExpandMoreIcon /></Button>
-      <Button variant="contained" color="secondary">Buy Now</Button>
+      <Button onClick={handlePricingClick} className={classes.toolbarButton}>Pricing <ExpandMoreIcon /></Button>
+      <Button onClick={handleBuyNowClick} variant="contained" color="secondary">Buy Now</Button>
     </div>
   );
 
