@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   toolbar: {
-    minWidth: '444px',
+    minWidth: '460px',
     width: '100%',
     maxWidth: '1000px',
     marginLeft: 'auto',
@@ -59,8 +59,8 @@ export default function SnowcodeAppBar() {
 
   const desktopToolbar = (
     <div>
-      <Button className={classes.toolbarButton}>Clients <ExpandMoreIcon /></Button>
       <Button className={classes.toolbarButton}>Pricing <ExpandMoreIcon /></Button>
+      <Button className={classes.toolbarButton}>Contact Us <ExpandMoreIcon /></Button>
       <Button variant="contained" color="secondary">Buy Now</Button>
     </div>
   );

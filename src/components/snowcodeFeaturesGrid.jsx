@@ -1,6 +1,10 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
+import CodeIcon from '@material-ui/icons/Code';
+import BrushIcon from '@material-ui/icons/Brush';
+import VideocamIcon from '@material-ui/icons/Videocam';
+import ReceiptIcon from '@material-ui/icons/Receipt';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -78,27 +82,27 @@ export default function SnowcodeFeaturesGrid({ theme }) {
   );
 
   const gridCells = [{
-    image: <AcUnitIcon />,
-    title: 'Feature title',
-    body: 'Subtitle subtitle',
+    image: <CodeIcon />,
+    title: 'Full-stack development',
+    body: '',
   }, {
     image: (
-      <AcUnitIcon />
+      <BrushIcon />
     ),
-    title: 'Feature title',
-    body: 'Subtitle subtitle',
+    title: 'Graphic design',
+    body: '',
   }, {
     image: (
-      <AcUnitIcon />
+      <VideocamIcon />
     ),
-    title: 'Feature title',
-    body: 'Subtitle subtitle',
+    title: 'Video production',
+    body: '',
   }, {
     image: (
-      <AcUnitIcon />
+      <ReceiptIcon />
     ),
-    title: 'Feature title',
-    body: 'Subtitle subtitle',
+    title: 'Flexible contracts',
+    body: '',
   }];
   const gridCellComponents = gridCells.map(cell => {
     return (

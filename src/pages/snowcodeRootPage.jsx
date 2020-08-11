@@ -3,6 +3,9 @@ import React from 'react';
 import SnowcodeAppBar from '../components/snowcodeAppBar';
 import SnowcodeLandingJumbotron from '../components/snowcodeLandingJumbotron';
 import SnowcodeFeaturesGrid from '../components/snowcodeFeaturesGrid';
+import SnowcodeWhatsIncludedTable from '../components/snowcodeWhatsIncludedTable';
+import SnowcodeLocationsMap from '../components/snowcodeLocationsMap';
+
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 
 export default function SnowcodeRootPage({ theme }) {
@@ -23,6 +26,16 @@ export default function SnowcodeRootPage({ theme }) {
     />
   );
 
+  const locationsMapComponent = (
+    <SnowcodeLocationsMap
+      theme={ theme }
+    />
+  );
+
+  const whatsIncludedTableComponent = (
+    <SnowcodeWhatsIncludedTable  />
+  );
+
   const footerComponent = (
     <SnowcodeRochesterLogo />
   );
@@ -31,6 +44,8 @@ export default function SnowcodeRootPage({ theme }) {
     appBarComponent,
     landingJumbotronComponent,
     featuresGridComponent,
+    locationsMapComponent,
+    whatsIncludedTableComponent,
     footerComponent
   ];
 
