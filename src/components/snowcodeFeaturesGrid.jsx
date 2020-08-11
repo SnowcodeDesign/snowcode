@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeFeaturesGrid({ theme }) {
   const classes = useStyles();
 
-  const headerTitle = "Let us design, develop, and ship ";
+  const headerTitle = "Let us design, develop, and deploy ";
   const headerTitleSuffix = "your next big idea";
   const headerBody = "Snowcode is a contract software development and design firm with a pool of artists and creatives. We create high-end software, video production, and graphic design for the lowest market price.";
 
@@ -84,25 +84,25 @@ export default function SnowcodeFeaturesGrid({ theme }) {
   const gridCells = [{
     image: <CodeIcon />,
     title: 'Full-stack development',
-    body: '',
+    body: 'From iOS to Android, desktop websites to progessive web apps, we offer a competitive range of frontend and backend tech.',
   }, {
     image: (
       <BrushIcon />
     ),
     title: 'Graphic design',
-    body: '',
+    body: 'With both full-time and freelance artists, we provide on-demand graphic design to brands as well as UI/UX design for products.',
   }, {
     image: (
       <VideocamIcon />
     ),
     title: 'Video production',
-    body: '',
+    body: 'Using the very best in video and audio production software, we can create immersive audio-visual experiences and brand content.',
   }, {
     image: (
       <ReceiptIcon />
     ),
     title: 'Flexible contracts',
-    body: '',
+    body: 'We have a personal, 1-on-1 business philosophy. Instead of one-offs, we prefer long-term roles that fit your specific needs.',
   }];
   const gridCellComponents = gridCells.map(cell => {
     return (

@@ -82,10 +82,20 @@ export default function SnowcodeWhatsIncludedTable({ }) {
   const featuresElements = features.map(f => {
     return (
       <div className={classes.feature}>
-        <div className={classes.featureImage}>
-          {f.image}
-        </div>
-        { f.text }
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <div className={classes.featureImage}>
+                  {f.image}
+                </div>
+              </td>
+              <td>
+                { f.text }
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   });
@@ -105,7 +115,7 @@ export default function SnowcodeWhatsIncludedTable({ }) {
               <div>
                 What's Included
                 <div className={classes.rootTextCellButton}>
-                  <Button variant="contained" color="secondary">Learn More About Our Skills</Button>
+                  <Button variant="outlined" color="secondary">Contact Us</Button>
                 </div>
               </div>
             </td>
