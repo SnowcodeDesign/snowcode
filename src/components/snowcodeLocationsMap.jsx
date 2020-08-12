@@ -5,7 +5,7 @@ import map from '../img/map.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    minHeight: '400px',
+    // minHeight: '400px',
     padding: 20,
     background: theme.palette.primary.main
   },
@@ -15,11 +15,22 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     tableLayout: 'fixed',
   },
-  cell: {
+  textCell: {
     width: '50%',
+    display: 'inline-block',
+    verticalAlign: 'top',
 
     [theme.breakpoints.down('xs')]: {
-      width: '70%',
+      width: '100%',
+    }
+  },
+  mapCell: {
+    width: '50%',
+    display: 'inline-block',
+    overflow: 'hidden',
+
+    [theme.breakpoints.down('xs')]: {
+      width: '100%',
     }
   },
   textPanel: {
@@ -63,8 +74,14 @@ const useStyles = makeStyles((theme) => ({
   },
   mapPanelImage: {
     width: '100%',
-    height: '100%',
-    objectFit: 'cover',
+    height: '300px',
+    objectFit: 'contain',
+    objectPosition: 'right',
+
+    [theme.breakpoints.down('xs')]: {
+      paddingTop: 20,
+      objectPosition: 'center'
+    }
   }
 }));
 
@@ -153,15 +170,13 @@ export default function SnowcodeLocationsMap({ theme }) {
     <div className={classes.root}>
       <table className={classes.rootTable}>
         <tbody>
-          <tr>
-            <td className={classes.cell}>
-              { textPanel }
-            </td>
+          <div className={classes.textCell}>
+          { textPanel }
+          </div>
 
-            <td className={classes.cell}>
-              { mapPanel }
-            </td>
-          </tr>
+          <div className={classes.mapCell}>
+          { mapPanel }
+          </div>
         </tbody>
       </table>
     </div>

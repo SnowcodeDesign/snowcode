@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '2rem',
     fontWeight: 800,
     lineHeight: 1,
-    textShadow: '0px 0px 2px rgba(0,0,0,0.2)'
+    letterSpacing: 1, 
+    textShadow: '0px 0px 2px rgba(0,0,0,0.1)'
   },
   body: {
     fontSize: '1.0rem',

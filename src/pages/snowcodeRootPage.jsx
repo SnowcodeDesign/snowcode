@@ -30,6 +30,16 @@ export default function SnowcodeRootPage({ theme }) {
     setContactUsDialogOpen(false);
   }
 
+  const handlePricingGetStartedClick = () => {
+    setPricingDialogOpen(false);
+    setContactUsDialogOpen(true);
+  }
+
+  const handlePricingContactUsClick = () => {
+    setPricingDialogOpen(false);
+    setContactUsDialogOpen(true);
+  }
+
   const appBarComponent = (
     <SnowcodeAppBar
       theme={ theme }
@@ -72,6 +82,8 @@ export default function SnowcodeRootPage({ theme }) {
     <SnowcodePricingDialog 
       open={ pricingDialogOpen }
       onCloseClick={ handlePricingCloseClick }
+      onGetStartedClick={ handlePricingGetStartedClick }
+      onContactUsClick={ handlePricingContactUsClick }
     />
   );
 

@@ -161,7 +161,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function SnowcodePricingDialog({ open, onCloseClick }) {
+export default function SnowcodePricingDialog({ open, onCloseClick, onGetStartedClick, onContactUsClick }) {
   const classes = useStyles();
 
   const desktopCellItems = [{
@@ -214,7 +214,7 @@ export default function SnowcodePricingDialog({ open, onCloseClick }) {
 
         <div className={classes.desktopCellPrice}>
           { !item.prices ? (
-            <Button fullWidth variant="outlined" color="secondary">
+            <Button fullWidth variant="outlined" color="secondary" onClick={onContactUsClick}>
               Contact Us
             </Button>
           ) : Object.keys(item.prices).map(time => {
@@ -230,7 +230,7 @@ export default function SnowcodePricingDialog({ open, onCloseClick }) {
         </div>
 
         <div className={classes.getStartedButton}>
-          <Button fullWidth variant="contained" color="secondary">
+          <Button fullWidth variant="contained" color="secondary" onClick={onGetStartedClick}>
             Get Started
           </Button>
         </div>
