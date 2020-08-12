@@ -50,6 +50,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     top: 60,
     height: '420px',
+    pointerEvents: 'none',
 
     opacity: 0.7,
     backgroundImage: `url(${snowcodeHeader})`,
