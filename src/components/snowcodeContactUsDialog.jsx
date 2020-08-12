@@ -12,6 +12,8 @@ import CloseIcon from '@material-ui/icons/Close';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import Draggable from 'react-draggable';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
   closeButton: {
@@ -48,6 +50,14 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+function PaperComponent(props) {
+  return (
+    <Draggable handle="#draggable-dialog-title" cancel={'[class*="MuiDialogContent-root"]'}>
+      <Paper {...props} />
+    </Draggable>
+  );
+}
+
 export default function SnowcodeContactUsDialog({ open, onCloseClick }) {
   const classes = useStyles();
 
@@ -57,8 +67,8 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick }) {
 
   return (
     <div>
-      <Dialog open={open} onClose={onCloseClick} aria-labelledby="form-dialog-title" fullWidth>
-        <DialogTitle className={classes.title} id="alert-dialog-slide-title">
+      <Dialog open={open} onClose={onCloseClick} aria-labelledby="form-dialog-title" fullWidth PaperComponent={PaperComponent}>
+        <DialogTitle className={classes.title} id="alert-dialog-slide-title"  style={{ cursor: 'move' }} id="draggable-dialog-title">
           <div className={classes.titleIcon}>
             <AcUnitIcon />
           </div>

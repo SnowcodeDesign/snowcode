@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "./static/css/main.cf02379d.chunk.css",
-    "main.js": "./static/js/main.7c5ae362.chunk.js",
-    "main.js.map": "./static/js/main.7c5ae362.chunk.js.map",
+    "main.js": "./static/js/main.d413a998.chunk.js",
+    "main.js.map": "./static/js/main.d413a998.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d9e7314b.js",
     "runtime-main.js.map": "./static/js/runtime-main.d9e7314b.js.map",
-    "static/js/2.6b8b4824.chunk.js": "./static/js/2.6b8b4824.chunk.js",
-    "static/js/2.6b8b4824.chunk.js.map": "./static/js/2.6b8b4824.chunk.js.map",
+    "static/js/2.067b1369.chunk.js": "./static/js/2.067b1369.chunk.js",
+    "static/js/2.067b1369.chunk.js.map": "./static/js/2.067b1369.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.6b4e3aeae17a45caa1513f834a43ba19.js": "./precache-manifest.6b4e3aeae17a45caa1513f834a43ba19.js",
+    "precache-manifest.bcb7098a5438523ee98b005603cd1eee.js": "./precache-manifest.bcb7098a5438523ee98b005603cd1eee.js",
     "service-worker.js": "./service-worker.js",
     "static/css/main.cf02379d.chunk.css.map": "./static/css/main.cf02379d.chunk.css.map",
-    "static/js/2.6b8b4824.chunk.js.LICENSE.txt": "./static/js/2.6b8b4824.chunk.js.LICENSE.txt",
+    "static/js/2.067b1369.chunk.js.LICENSE.txt": "./static/js/2.067b1369.chunk.js.LICENSE.txt",
     "static/media/fonts.css": "./static/media/Lato-Regular.2d36b1a9.ttf",
     "static/media/Logo_of_Rochester,_New_York.svg": "./static/media/Logo_of_Rochester,_New_York.cc32b90e.svg",
     "static/media/header-2.png": "./static/media/header-2.6d2a6469.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d9e7314b.js",
-    "static/js/2.6b8b4824.chunk.js",
+    "static/js/2.067b1369.chunk.js",
     "static/css/main.cf02379d.chunk.css",
-    "static/js/main.7c5ae362.chunk.js"
+    "static/js/main.d413a998.chunk.js"
   ]
 }
