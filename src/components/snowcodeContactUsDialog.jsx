@@ -68,7 +68,7 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick }) {
   return (
     <div>
       <Dialog open={open} onClose={onCloseClick} aria-labelledby="form-dialog-title" fullWidth PaperComponent={PaperComponent}>
-        <DialogTitle className={classes.title} id="alert-dialog-slide-title"  style={{ cursor: 'move' }} id="draggable-dialog-title">
+        <DialogTitle className={classes.title} id="alert-dialog-slide-title"  style={{ cursor: 'move' }} id="draggable-dialog-title" onClick={onCloseClick}>
           <div className={classes.titleIcon}>
             <AcUnitIcon />
           </div>

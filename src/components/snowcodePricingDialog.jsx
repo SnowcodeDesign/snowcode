@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     width: '100%',
 
-    [theme.breakpoints.up(630)]: {
+    [theme.breakpoints.up(640)]: {
       display: 'block',
 
       maxWidth: '900px',
@@ -98,7 +98,8 @@ const useStyles = makeStyles((theme) => ({
   desktopCell: {
     width: '25%',
     padding: 10,
-    borderBottom: '1px solid rgba(0,0,0,0.05)'
+    borderBottom: '1px solid rgba(0,0,0,0.05)',
+    verticalAlign: 'top'
   },
 
   desktopCellTitle: {
@@ -110,7 +111,32 @@ const useStyles = makeStyles((theme) => ({
   desktopCellDescription: {
     fontSize: '0.75rem',
     fontWeight: 500,
-    color: 'rgba(0,0,0,1)'
+    color: 'rgba(0,0,0,1)',
+    // height: '100px',
+
+    // [theme.breakpoints.down(890)]: {
+    //   height: '120px',
+    // },
+
+    // [theme.breakpoints.down(860)]: {
+    //   height: '136px',
+    // },
+
+    // [theme.breakpoints.down(790)]: {
+    //   height: '146px',
+    // },
+
+    // [theme.breakpoints.down(770)]: {
+    //   height: '170px',
+    // },
+
+    // [theme.breakpoints.down(750)]: {
+    //   height: '200px',
+    // },
+
+    // [theme.breakpoints.down(641)]: {
+    //   height: '120px',
+    // },
   },
 
   desktopCellPrice: {
@@ -136,7 +162,7 @@ const useStyles = makeStyles((theme) => ({
   mobileContent: {
     display: 'inline-block',
 
-    [theme.breakpoints.up(630)]: {
+    [theme.breakpoints.up(640)]: {
       display: 'none',
     },
   },
@@ -157,6 +183,9 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     opacity: 0.5
+  },
+  desktopCellContactUsButton: {
+    marginTop: 18,
   }
 }));
 
@@ -191,14 +220,21 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
     }
   }, {
     title: 'Large Business',
-    description: 'Answer the big questions about your business. Create cross-platform networks, deep production testing, in-house architecture review and refactoring, at-scale database management.',
+    description: (
+      <span>
+      {'Answer the big questions about your business. Create cross-platform networks, deep production testing, in-house architecture review and refactoring, at-scale database management.'}<br/><br/>
+      </span>),
     prices: { 
       'mo': '$2,000',
       'hr': '$100'
     }
   }, {
     title: 'Enterprise',
-    description: 'Bring our whole team of engineers and artists on board to tackle extremely ambitious technological feats. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.',
+    description: (
+      <span>
+      {'Bring our whole team of engineers and artists on board to tackle extremely ambitious technological feats. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'}<br/><br/>
+      </span>)
+    ,
   }];
 
   const desktopCells = desktopCellItems.map(item => {
@@ -214,7 +250,7 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
 
         <div className={classes.desktopCellPrice}>
           { !item.prices ? (
-            <Button fullWidth variant="outlined" color="secondary" onClick={onContactUsClick}>
+            <Button className={classes.desktopCellContactUsButton} fullWidth variant="outlined" color="secondary" onClick={onContactUsClick}>
               Contact Us
             </Button>
           ) : Object.keys(item.prices).map(time => {

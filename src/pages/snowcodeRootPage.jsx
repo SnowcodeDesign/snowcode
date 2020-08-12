@@ -10,7 +10,28 @@ import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
 
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 
+import '../css/appearAnimation.css';
+import { makeStyles } from '@material-ui/core/styles';
+
+import "animate.css/animate.min.css";
+import ScrollAnimation from 'react-animate-on-scroll';
+
+const useStyles = makeStyles((theme) => ({
+  appearAnimation: {
+  },
+
+  root: {
+
+    '& > *': {
+
+
+    }
+  }
+}));
+
 export default function SnowcodeRootPage({ theme }) {
+  const classes = useStyles();
+
   const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
   const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(false);
 
@@ -49,11 +70,13 @@ export default function SnowcodeRootPage({ theme }) {
   );
 
   const landingJumbotronComponent = (
-    <SnowcodeLandingJumbotron 
-      theme={ theme }
-      onPricingClick={ handlePricingClick }
-      onBuyNowClick={ handleContactUsClick }
-    />
+    <div className={classes.appearAnimation}>
+      <SnowcodeLandingJumbotron 
+        theme={ theme }
+        onPricingClick={ handlePricingClick }
+        onBuyNowClick={ handleContactUsClick }
+      />
+    </div>
   );
 
   const featuresGridComponent = (
@@ -97,13 +120,25 @@ export default function SnowcodeRootPage({ theme }) {
   const componentTree = [
     appBarComponent,
     landingJumbotronComponent,
+    pricingDialogComponent,
+    contactUsDialogComponent
+  ].concat([
+    ,
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
     footerComponent,
-    pricingDialogComponent,
-    contactUsDialogComponent
-  ];
+  ].map(e => {
+    return (
+      <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.6} animateOnce={true}>
+        { e }
+      </ScrollAnimation>
+    );
+  }))
 
-  return componentTree;
+  return (
+    <div className={classes.root}>
+      { componentTree }
+    </div>
+  );
 }
