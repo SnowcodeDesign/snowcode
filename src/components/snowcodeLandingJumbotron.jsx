@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 140,
     paddingBottom: 140,
 
-    background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(100,147,255,0.25), rgba(100,147,255,0.05), rgba(255, 255, 255, 1))`,
+    background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(100,147,255,0.25), rgba(255, 255, 255, 1))`,
 
     // backgroundImage: `url(${snowcodeHeader})`,
     // backgroundRepeat: 'no-repeat',
