@@ -7,6 +7,7 @@ import SnowcodeWhatsIncludedTable from '../components/snowcodeWhatsIncludedTable
 import SnowcodeLocationsMap from '../components/snowcodeLocationsMap';
 import SnowcodePricingDialog from '../components/snowcodePricingDialog';
 import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
+import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
 
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 
@@ -98,11 +99,15 @@ export default function SnowcodeRootPage({ theme }) {
   );
 
   const footerComponent = (
-    <SnowcodeRochesterLogo />
+    <SnowcodeRochesterLogo 
+      theme={ theme }
+      useDark={ true }
+    />
   );
 
   const pricingDialogComponent = (
     <SnowcodePricingDialog 
+      theme={ theme }
       open={ pricingDialogOpen }
       onCloseClick={ handlePricingCloseClick }
       onGetStartedClick={ handlePricingGetStartedClick }
@@ -117,6 +122,10 @@ export default function SnowcodeRootPage({ theme }) {
     />
   );
 
+  const socialMediaLinksComponent = (
+    <SnowcodeSocialMediaLinks />
+  );
+
   const componentTree = [
     appBarComponent,
     landingJumbotronComponent,
@@ -126,14 +135,16 @@ export default function SnowcodeRootPage({ theme }) {
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
-    footerComponent,
   ].map(e => {
     return (
       <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.4} animateOnce={true} offset={100}>
         { e }
       </ScrollAnimation>
     );
-  }))
+  })).concat([
+    socialMediaLinksComponent,
+    footerComponent,
+  ]);
 
   return (
     <div className={classes.root}>

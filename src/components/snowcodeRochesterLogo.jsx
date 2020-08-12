@@ -2,13 +2,14 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import rochesterLogo from '../img/Logo_of_Rochester,_New_York.svg';
-import philadelphiaLogo from '../img/00ca472cc3ffe59c94e540450c11b2c3.png';
+import philadelphiaLogo from '../img/white-00ca472cc3ffe59c94e540450c11b2c3.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     paddingTop: 50,
     paddingBottom: 20,
+
   },
   image: {
     width: '120px',
@@ -29,11 +30,16 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeRochesterLogo({}) {
+export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
   const classes = useStyles();
 
+  const rootStyle = useDark !== true ? {} : {
+    background: '#001d5a',
+    color: theme.palette.secondary.contrastText
+  };
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={ rootStyle }>
       <center>
         <img className={ classes.image } src={ rochesterLogo } />
 

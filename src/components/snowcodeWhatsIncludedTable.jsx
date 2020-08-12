@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     padding: 20,
+    paddingBottom: 30
   },
   rootTable: {
     width: '100%',

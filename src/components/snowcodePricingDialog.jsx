@@ -206,7 +206,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-export default function SnowcodePricingDialog({ open, onCloseClick, onGetStartedClick, onContactUsClick }) {
+export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGetStartedClick, onContactUsClick }) {
   const classes = useStyles();
 
   const desktopCellItems = [{
@@ -429,7 +429,10 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
           </DialogContentText>
 
           <div className={classes.footer}>
-            <SnowcodeRochesterLogo />
+            <SnowcodeRochesterLogo 
+              theme={ theme }
+              useDark={ false}
+            />
           </div>
         </DialogContent>
       </Dialog>
