@@ -130,7 +130,7 @@ export default function SnowcodeRootPage({ theme }) {
     footerComponent,
   ].map(e => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.6} animateOnce={true}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.6} animateOnce={true}>
         { e }
       </ScrollAnimation>
     );
