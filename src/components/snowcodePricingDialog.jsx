@@ -230,10 +230,7 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
     }
   }, {
     title: 'Enterprise',
-    description: (
-      <span>
-      {'Bring our whole team of engineers and artists on board to tackle extremely ambitious technological feats. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'}<br/><br/>
-      </span>)
+    description: 'Bring our whole team of engineers and artists on board to tackle extremely ambitious technological feats. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'
     ,
   }];
 
