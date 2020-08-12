@@ -49,7 +49,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 10,
     paddingBottom: 20,
     fontSize: '1.7rem',
-    fontWeight: 1000,
+    letterSpacing: 0,
+    lineHeight: 1.3,
+    fontWeight: 800,
     textAlign: 'center',
     color: 'rgba(0,0,0,1.0)'
   },
@@ -81,6 +83,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   desktopRow: {
+    display: 'table',
+    width: '100%',
 
     '& > td:nth-child(1)': {
       borderRight: '1px solid rgba(0,0,0,0.05)'
@@ -99,17 +103,21 @@ const useStyles = makeStyles((theme) => ({
     width: '25%',
     padding: 10,
     borderBottom: '1px solid rgba(0,0,0,0.05)',
-    verticalAlign: 'top'
+    verticalAlign: 'top',
+    display: 'table-cell',
   },
 
   desktopCellTitle: {
-    fontSize: '1.2rem',
+    fontSize: '1.4rem',
+    display: 'flex',
+    lineHeight: 1,
     fontWeight: 800,
     color: 'rgba(0,0,0,1)'
   },
 
   desktopCellDescription: {
-    fontSize: '0.75rem',
+    paddingTop: 4,
+    fontSize: '0.9rem',
     fontWeight: 500,
     color: 'rgba(0,0,0,1)',
     // height: '100px',
@@ -143,9 +151,17 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.15rem',
     fontWeight: 800,
     color: 'rgba(0,0,0,1)',
-    paddingTop: 30,
-    paddingBottom: 30,
-    textAlign: 'center'
+    paddingTop: 10,
+    paddingBottom: 10,
+    textAlign: 'center',
+  },
+
+  desktopCellPriceCell: {
+    width: '25%',
+    padding: 10,
+    borderBottom: '1px solid rgba(0,0,0,0.05)',
+    verticalAlign: 'bottom',
+    display: 'table-cell',
   },
 
   desktopCellPriceSuffix: {
@@ -185,7 +201,7 @@ const useStyles = makeStyles((theme) => ({
     opacity: 0.5
   },
   desktopCellContactUsButton: {
-    marginTop: 18,
+    marginBottom: 10,    
   }
 }));
 
@@ -245,22 +261,67 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
           {item.description}
         </div>
 
-        <div className={classes.desktopCellPrice}>
-          { !item.prices ? (
-            <Button className={classes.desktopCellContactUsButton} fullWidth variant="outlined" color="secondary" onClick={onContactUsClick}>
-              Contact Us
-            </Button>
-          ) : Object.keys(item.prices).map(time => {
-            return (
-              <div>
-                { item.prices[time] }
-                <span className={classes.desktopCellPriceSuffix}>
-                  /{ time }
-                </span>
-              </div>
-            );
-          }) }
+        { !item.prices ? (
+          <div className={classes.desktopCellPrice} />
+        ) : (
+          <div className={classes.desktopCellPrice}>
+            { Object.keys(item.prices).map(time => {
+              return (
+                <div>
+                  { item.prices[time] }
+                  <span className={classes.desktopCellPriceSuffix}>
+                    /{ time }
+                  </span>
+                </div>
+              );
+            }) }
+          </div>
+        ) }
+
+        <div className={classes.getStartedButton}>
+          <Button fullWidth variant="contained" color="secondary" onClick={onGetStartedClick}>
+            Get Started
+          </Button>
         </div>
+      </td>
+    );
+  });
+
+  const desktopTitleDescriptionCells = desktopCellItems.map(item => {
+    return (
+      <td className={classes.desktopCell}>
+        <div className={classes.desktopCellTitle}>
+          {item.title}
+        </div>
+
+        <div className={classes.desktopCellDescription}>
+          {item.description}
+        </div>
+      </td>
+    );
+  });
+
+  const desktopPriceCells = desktopCellItems.map(item => {
+    return (
+      <td className={classes.desktopCellPriceCell}>
+        { !item.prices ? (
+          <Button className={classes.desktopCellContactUsButton} fullWidth variant="outlined" color="secondary" onClick={onContactUsClick}>
+            Contact Us
+          </Button>
+        ) : (
+          <div className={classes.desktopCellPrice}>
+            { Object.keys(item.prices).map(time => {
+              return (
+                <div>
+                  { item.prices[time] }
+                  <span className={classes.desktopCellPriceSuffix}>
+                    /{ time }
+                  </span>
+                </div>
+              );
+            }) }
+          </div>
+        ) }
 
         <div className={classes.getStartedButton}>
           <Button fullWidth variant="contained" color="secondary" onClick={onGetStartedClick}>
@@ -277,7 +338,13 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
         <tbody>
           <tr className={classes.desktopRow}>
 
-           { desktopCells }
+           { desktopTitleDescriptionCells }
+
+          </tr>
+
+          <tr className={classes.desktopRow}>
+
+           { desktopPriceCells }
 
           </tr>
         </tbody>
@@ -291,15 +358,19 @@ export default function SnowcodePricingDialog({ open, onCloseClick, onGetStarted
       <table className={classes.mobileTable}>
         <tbody>
           <tr className={classes.mobileRow}>
-
-           { desktopCells.slice(0, 2) }
-
+           { desktopTitleDescriptionCells.slice(0, 2) }
           </tr>
 
           <tr className={classes.mobileRow}>
+           { desktopPriceCells.slice(0, 2) }
+          </tr>
 
-           { desktopCells.slice(2) }
+          <tr className={classes.mobileRow}>
+           { desktopTitleDescriptionCells.slice(2) }
+          </tr>
 
+          <tr className={classes.mobileRow}>
+           { desktopPriceCells.slice(2) }
           </tr>
         </tbody>
       </table>

@@ -123,14 +123,13 @@ export default function SnowcodeRootPage({ theme }) {
     pricingDialogComponent,
     contactUsDialogComponent
   ].concat([
-    ,
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
     footerComponent,
   ].map(e => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.6} animateOnce={true}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.4} animateOnce={true} offset={100}>
         { e }
       </ScrollAnimation>
     );
