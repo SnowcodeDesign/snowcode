@@ -48,8 +48,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeContactUsDialog({ open, onCloseClick, onSendEmailButtonClick }) {
+export default function SnowcodeContactUsDialog({ open, onCloseClick }) {
   const classes = useStyles();
+
+  const handleSendEmailButtonClick = () => {
+    onCloseClick();
+  }
 
   return (
     <div>
@@ -82,7 +86,7 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick, onSendEmai
             <div className={classes.button}>
               
               <a className="mailtoui" href="mailto:snowcodedesign@gmail.com" style={{textDecoration: 'none'}}>
-                <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ onSendEmailButtonClick }>
+                <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ handleSendEmailButtonClick }>
 
                   Send Email
 
