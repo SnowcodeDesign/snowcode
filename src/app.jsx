@@ -37,8 +37,8 @@ const useStyles = makeStyles((theme) => ({
 export default function App({ }) {
   const classes = useStyles();
 
-  const currentPath = window.location.pathname;
-  const isCurrentPathPressRelease = currentPath && currentPath.length > 0 && currentPath === '/press';
+  const currentPath = window.location.search;
+  const isCurrentPathPressRelease = currentPath && currentPath.length > 0 && currentPath === '?press';
   const page = !isCurrentPathPressRelease ? (
     <SnowcodeRootPage 
       theme={theme}

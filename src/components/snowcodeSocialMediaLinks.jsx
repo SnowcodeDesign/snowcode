@@ -85,7 +85,10 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeSocialMediaLinks({}) {
   const classes = useStyles();
 
-
+  const handlePressClick = () => {
+    window.location = "https://snowcode.design?press";
+  }
+  
   return (
     <div className={classes.root}><div className={classes.container}>
       <div className={classes.left}>
@@ -184,7 +187,7 @@ export default function SnowcodeSocialMediaLinks({}) {
           <tbody>
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="/press">
+                <a href="#" onClick={ handlePressClick }>
                   Letter to the Community
                 </a>
               </td>

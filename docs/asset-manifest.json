@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.3081a1b9.chunk.css",
-    "main.js": "/static/js/main.588d591e.chunk.js",
-    "main.js.map": "/static/js/main.588d591e.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.b17d2dab.js",
-    "runtime-main.js.map": "/static/js/runtime-main.b17d2dab.js.map",
-    "static/css/2.f01c5455.chunk.css": "/static/css/2.f01c5455.chunk.css",
-    "static/js/2.bb62de1e.chunk.js": "/static/js/2.bb62de1e.chunk.js",
-    "static/js/2.bb62de1e.chunk.js.map": "/static/js/2.bb62de1e.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6b7636b420d220d06f0c3c55577acd35.js": "/precache-manifest.6b7636b420d220d06f0c3c55577acd35.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.f01c5455.chunk.css.map": "/static/css/2.f01c5455.chunk.css.map",
-    "static/css/main.3081a1b9.chunk.css.map": "/static/css/main.3081a1b9.chunk.css.map",
-    "static/js/2.bb62de1e.chunk.js.LICENSE.txt": "/static/js/2.bb62de1e.chunk.js.LICENSE.txt",
-    "static/media/fonts.css": "/static/media/Lato-ThinItalic.4ac7208b.ttf",
-    "static/media/Logo_of_Rochester,_New_York.svg": "/static/media/Logo_of_Rochester,_New_York.38152d50.svg",
-    "static/media/header-icons.png": "/static/media/header-icons.ff44770a.png",
-    "static/media/map.png": "/static/media/map.c1541633.png"
+    "main.css": "./static/css/main.af86988f.chunk.css",
+    "main.js": "./static/js/main.2b978cb7.chunk.js",
+    "main.js.map": "./static/js/main.2b978cb7.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.d9e7314b.js",
+    "runtime-main.js.map": "./static/js/runtime-main.d9e7314b.js.map",
+    "static/css/2.f01c5455.chunk.css": "./static/css/2.f01c5455.chunk.css",
+    "static/js/2.bb62de1e.chunk.js": "./static/js/2.bb62de1e.chunk.js",
+    "static/js/2.bb62de1e.chunk.js.map": "./static/js/2.bb62de1e.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.c3a494ad9d70b63bd7efee83098a12ea.js": "./precache-manifest.c3a494ad9d70b63bd7efee83098a12ea.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/2.f01c5455.chunk.css.map": "./static/css/2.f01c5455.chunk.css.map",
+    "static/css/main.af86988f.chunk.css.map": "./static/css/main.af86988f.chunk.css.map",
+    "static/js/2.bb62de1e.chunk.js.LICENSE.txt": "./static/js/2.bb62de1e.chunk.js.LICENSE.txt",
+    "static/media/fonts.css": "./static/media/Lato-ThinItalic.4ac7208b.ttf",
+    "static/media/Logo_of_Rochester,_New_York.svg": "./static/media/Logo_of_Rochester,_New_York.38152d50.svg",
+    "static/media/header-icons.png": "./static/media/header-icons.ff44770a.png",
+    "static/media/map.png": "./static/media/map.c1541633.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.b17d2dab.js",
+    "static/js/runtime-main.d9e7314b.js",
     "static/css/2.f01c5455.chunk.css",
     "static/js/2.bb62de1e.chunk.js",
-    "static/css/main.3081a1b9.chunk.css",
-    "static/js/main.588d591e.chunk.js"
+    "static/css/main.af86988f.chunk.css",
+    "static/js/main.2b978cb7.chunk.js"
   ]
 }
