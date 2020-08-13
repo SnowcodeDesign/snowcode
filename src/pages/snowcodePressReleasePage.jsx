@@ -1,21 +1,13 @@
 import React from 'react';
 
 import SnowcodeAppBar from '../components/snowcodeAppBar';
-import SnowcodeLandingJumbotron from '../components/snowcodeLandingJumbotron';
-import SnowcodeFeaturesGrid from '../components/snowcodeFeaturesGrid';
-import SnowcodeWhatsIncludedTable from '../components/snowcodeWhatsIncludedTable';
-import SnowcodeLocationsMap from '../components/snowcodeLocationsMap';
 import SnowcodePricingDialog from '../components/snowcodePricingDialog';
 import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
 import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
-
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
+import SnowcodePressReleaseTable from '../components/snowcodePressReleaseTable';
 
-import '../css/appearAnimation.css';
 import { makeStyles } from '@material-ui/core/styles';
-
-import "animate.css/animate.min.css";
-import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles((theme) => ({
   appearAnimation: {
@@ -30,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeRootPage({ theme }) {
+export default function SnowcodePressReleasePage({ theme }) {
   const classes = useStyles();
 
   const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
@@ -65,7 +57,7 @@ export default function SnowcodeRootPage({ theme }) {
   const handleLogoClick = () => {
     window.location.pathname = '/';
   }
-  
+
   const appBarComponent = (
     <SnowcodeAppBar
       theme={ theme }
@@ -75,38 +67,16 @@ export default function SnowcodeRootPage({ theme }) {
     />
   );
 
-  const landingJumbotronComponent = (
-    <div className={classes.appearAnimation}>
-      <SnowcodeLandingJumbotron 
-        theme={ theme }
-        onPricingClick={ handlePricingClick }
-        onBuyNowClick={ handleContactUsClick }
-      />
-    </div>
-  );
-
-  const featuresGridComponent = (
-    <SnowcodeFeaturesGrid 
-      theme={ theme }
-    />
-  );
-
-  const locationsMapComponent = (
-    <SnowcodeLocationsMap
-      theme={ theme }
-    />
-  );
-
-  const whatsIncludedTableComponent = (
-    <SnowcodeWhatsIncludedTable 
-      onContactUsClick={ handleContactUsClick } 
-    />
-  );
-
   const footerComponent = (
     <SnowcodeRochesterLogo 
       theme={ theme }
       useDark={ true }
+    />
+  );
+
+  const pressReleaseTable = (
+    <SnowcodePressReleaseTable 
+      theme={ theme }
     />
   );
 
@@ -127,29 +97,19 @@ export default function SnowcodeRootPage({ theme }) {
     />
   );
 
+
   const socialMediaLinksComponent = (
     <SnowcodeSocialMediaLinks />
   );
 
   const componentTree = [
     appBarComponent,
-    landingJumbotronComponent,
+    pressReleaseTable,
     pricingDialogComponent,
-    contactUsDialogComponent
-  ].concat([
-    featuresGridComponent,
-    locationsMapComponent,
-    whatsIncludedTableComponent,
-  ].map(e => {
-    return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.4} animateOnce={true} offset={100}>
-        { e }
-      </ScrollAnimation>
-    );
-  })).concat([
+    contactUsDialogComponent,
     socialMediaLinksComponent,
     footerComponent,
-  ]);
+  ];
 
   return (
     <div className={classes.root}>

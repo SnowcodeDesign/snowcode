@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick }) {
+export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, onLogoClick }) {
   const classes = useStyles();
 
   const [mobileMenuAnchor, setMobileMenuAnchor] = React.useState(null);
@@ -112,7 +112,7 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick })
     <div className={classes.root}>
       <AppBar position="static" elevation={0}>
         <Toolbar className={classes.toolbar}>
-          <IconButton edge="start" color="inherit">
+          <IconButton edge="start" color="inherit" onClick={ onLogoClick }>
             <AcUnitIcon />
           </IconButton>
 

@@ -5,6 +5,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SnowcodeRootPage from './pages/snowcodeRootPage';
+import SnowcodePressReleasePage from './pages/snowcodePressReleasePage';
 
 import './css/fonts.css';
 
@@ -36,15 +37,26 @@ const useStyles = makeStyles((theme) => ({
 export default function App({ }) {
   const classes = useStyles();
 
+  const currentPath = window.location.pathname;
+  const isCurrentPathPressRelease = currentPath && currentPath.length > 0 && currentPath === '/press';
+  const page = !isCurrentPathPressRelease ? (
+    <SnowcodeRootPage 
+      theme={theme}
+    />
+  ) : (
+    <SnowcodePressReleasePage
+      theme={theme}
+    />
+  );
+
   return (
     <div className={classes.root}>
       <div className={classes.app}>
         <ThemeProvider theme={theme}>
           <CssBaseline />
           
-          <SnowcodeRootPage 
-            theme={theme}
-          />
+          { page }
+
         </ThemeProvider>
       </div>
     </div>

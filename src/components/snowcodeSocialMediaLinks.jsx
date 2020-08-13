@@ -79,7 +79,7 @@ const useStyles = makeStyles((theme) => ({
     '&:hover': {
       textDecoration: 'underline'
     },
-  }
+  },
 }));
 
 export default function SnowcodeSocialMediaLinks({}) {
@@ -167,6 +167,28 @@ export default function SnowcodeSocialMediaLinks({}) {
                 </a>
               </td>
             </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div className={classes.right}>
+        <table className={classes.linkTable}>
+          <thead>
+            <tr>
+              <td>
+                NEWS
+              </td>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="/press">
+                  Letter to the Community
+                </a>
+              </td>
+            </tr>            
           </tbody>
         </table>
       </div>
