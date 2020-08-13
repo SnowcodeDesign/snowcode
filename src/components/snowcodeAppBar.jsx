@@ -30,7 +30,8 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
     lineHeight: 1,
-    fontSize: '1.35rem'
+    fontSize: '1.35rem',
+    cursor: 'pointer'
   },
   titleSuffix: {
     opacity: 0.8,
@@ -116,7 +117,7 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
             <AcUnitIcon />
           </IconButton>
 
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h6" className={classes.title} onClick={ onLogoClick }>
             Snowcode 
           </Typography>
 

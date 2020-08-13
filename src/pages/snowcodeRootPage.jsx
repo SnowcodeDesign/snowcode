@@ -63,7 +63,7 @@ export default function SnowcodeRootPage({ theme }) {
   }
 
   const handleLogoClick = () => {
-    window.location.pathname = '/';
+    window.location = 'https://snowcode.design/';
   }
   
   const appBarComponent = (
