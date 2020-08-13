@@ -46,7 +46,7 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
         <div className={classes.footer}>
           Made with <img className={classes.footerImage} src={ philadelphiaLogo } /> in Rochester, NY
           <br/>
-          &copy; 2020 Julian (insanj) Weiss
+          &copy; 2020 Snowcode, LLC
         </div>
       </center>
     </div>
