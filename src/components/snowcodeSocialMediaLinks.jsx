@@ -27,6 +27,11 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: 'top',
     paddingLeft: 60
   },
+  rightLink: {
+    display: 'inline-block',
+    verticalAlign: 'top',
+    paddingLeft: 20
+  },
   brand: {
     display: 'inline-block',
     fontWeight: 700,
@@ -88,7 +93,7 @@ export default function SnowcodeSocialMediaLinks({}) {
   const handlePressClick = () => {
     window.location = "https://snowcode.design?press";
   }
-  
+
   return (
     <div className={classes.root}><div className={classes.container}>
       <div className={classes.left}>
@@ -174,7 +179,7 @@ export default function SnowcodeSocialMediaLinks({}) {
         </table>
       </div>
 
-      <div className={classes.right}>
+      <div className={classes.rightLink}>
         <table className={classes.linkTable}>
           <thead>
             <tr>
@@ -189,6 +194,14 @@ export default function SnowcodeSocialMediaLinks({}) {
               <td className={classes.linkCell}>
                 <a href="#" onClick={ handlePressClick }>
                   Letter to the Community
+                </a>
+              </td>
+            </tr>
+
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+                  Newsletter
                 </a>
               </td>
             </tr>            

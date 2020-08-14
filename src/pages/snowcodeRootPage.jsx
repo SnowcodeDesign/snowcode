@@ -8,8 +8,8 @@ import SnowcodeLocationsMap from '../components/snowcodeLocationsMap';
 import SnowcodePricingDialog from '../components/snowcodePricingDialog';
 import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
 import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
-
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
+import SnowcodeNewsletterJumbotron from '../components/snowcodeNewsletterJumbotron';
 
 import '../css/appearAnimation.css';
 import { makeStyles } from '@material-ui/core/styles';
@@ -131,6 +131,10 @@ export default function SnowcodeRootPage({ theme }) {
     <SnowcodeSocialMediaLinks />
   );
 
+  const newsletterJumbotronComponent = (
+    <SnowcodeNewsletterJumbotron />
+  );
+
   const componentTree = [
     appBarComponent,
     landingJumbotronComponent,
@@ -140,6 +144,7 @@ export default function SnowcodeRootPage({ theme }) {
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
+    newsletterJumbotronComponent,
   ].map(e => {
     return (
       <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.4} animateOnce={true} offset={100}>

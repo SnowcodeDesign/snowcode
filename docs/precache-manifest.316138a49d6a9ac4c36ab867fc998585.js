@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e73c8e0a2306917e3a9faba82bc841c7",
+    "revision": "67cca0b01e2fcef485b205381ce2fca4",
     "url": "./index.html"
   },
   {
-    "revision": "43eccab62d8dfc25947d",
+    "revision": "80e1236f9822c89a04b7",
     "url": "./static/css/2.f01c5455.chunk.css"
   },
   {
-    "revision": "27a86ddf1040eee025a6",
+    "revision": "ca5bec24e7a3ca135df1",
     "url": "./static/css/main.af86988f.chunk.css"
   },
   {
-    "revision": "43eccab62d8dfc25947d",
-    "url": "./static/js/2.bb62de1e.chunk.js"
+    "revision": "80e1236f9822c89a04b7",
+    "url": "./static/js/2.cc44bdae.chunk.js"
   },
   {
     "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "./static/js/2.bb62de1e.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.cc44bdae.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "27a86ddf1040eee025a6",
-    "url": "./static/js/main.1b3d548d.chunk.js"
+    "revision": "ca5bec24e7a3ca135df1",
+    "url": "./static/js/main.764f5cb5.chunk.js"
   },
   {
     "revision": "5561a4792d5dc28a2d6e",
@@ -70,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "38152d50d5bb5958cf82df444c6644c3",
     "url": "./static/media/Logo_of_Rochester,_New_York.38152d50.svg"
+  },
+  {
+    "revision": "11a397e701235917b859598af502a844",
+    "url": "./static/media/cloud.11a397e7.png"
   },
   {
     "revision": "ff44770a6faf350ae34282d134e387c8",
