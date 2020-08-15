@@ -17,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     maxWidth: '900px',
+
+    '& > * > table': {
+      paddingRight: 10,
+    }
   },
   left: {
     display: 'inline-block',
@@ -26,12 +30,12 @@ const useStyles = makeStyles((theme) => ({
   right: {
     display: 'inline-block',
     verticalAlign: 'top',
-    paddingLeft: 60
+    paddingLeft: 0,
   },
   rightLink: {
     display: 'inline-block',
     verticalAlign: 'top',
-    paddingLeft: 20
+    paddingLeft: 0,
   },
   brand: {
     display: 'inline-block',
