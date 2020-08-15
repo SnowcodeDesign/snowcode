@@ -5,6 +5,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/Email';
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -115,6 +116,12 @@ export default function SnowcodeSocialMediaLinks({}) {
               </td>
 
               <td className={classes.iconCell}>
+                <a href="http://github.com/snowcodedesign" target="_blank">
+                  <GitHubIcon />
+                </a>
+              </td>
+
+              <td className={classes.iconCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
                   <InstagramIcon />
                 </a>
@@ -154,6 +161,13 @@ export default function SnowcodeSocialMediaLinks({}) {
                 </a>
               </td>
             </tr>
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="https://github.com/snowcodedesign" target="_blank">
+                  GitHub
+                </a>
+              </td>
+            </tr>
              <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
@@ -163,7 +177,7 @@ export default function SnowcodeSocialMediaLinks({}) {
             </tr>
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a className="mailtoui" href="mailto:snowcodedesign@gmail.com" target="_blank">
+                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
                   Email
                 </a>
               </td>
