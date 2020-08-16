@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeRootPage({ theme }) {
   const classes = useStyles();
 
-  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(true);
+  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
   const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(false);
 
   const handlePricingClick = () => {
