@@ -106,7 +106,7 @@ export default function SnowcodeLandingJumbotron({ theme, onBuyNowClick, onPrici
   const titleSuffix = "online";
   const body = (
     <div>
-    {'Cutting-edge websites and apps for businesses.'}
+    {'Cutting-edge websites and apps for everyone.'}
     <br/>
     {'We design scalable, Fortune 500-grade products for you and ship within three months.'}
     </div>

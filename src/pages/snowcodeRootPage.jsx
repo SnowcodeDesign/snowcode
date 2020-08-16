@@ -136,18 +136,32 @@ export default function SnowcodeRootPage({ theme }) {
   );
 
   const componentTree = [
-    appBarComponent,
+    appBarComponent
+  ].concat([
     landingJumbotronComponent,
     pricingDialogComponent,
     contactUsDialogComponent
-  ].concat([
+  ].map(e => {
+    return (
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
+        { e }
+      </ScrollAnimation>
+    );
+  })).concat([
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
+  ].map(e => {
+    return (
+      <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.8} animateOnce={true} offset={60}>
+        { e }
+      </ScrollAnimation>
+    );
+  })).concat([
     newsletterJumbotronComponent,
   ].map(e => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.4} animateOnce={true} offset={100}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
         { e }
       </ScrollAnimation>
     );
