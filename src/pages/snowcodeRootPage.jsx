@@ -159,7 +159,7 @@ export default function SnowcodeRootPage({ theme }) {
     portfolioGridComponent
   ].map(e => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.8} animateOnce={true} offset={60}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
         { e }
       </ScrollAnimation>
     );
