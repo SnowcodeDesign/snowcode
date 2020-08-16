@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import rochesterLogo from '../img/Logo_of_Rochester,_New_York.svg';
 import philadelphiaLogo from '../img/white-00ca472cc3ffe59c94e540450c11b2c3.png';
+import philadelphiaDarkerLogo from '../img/00ca472cc3ffe59c94e540450c11b2c3.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,7 +45,7 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
         <img className={ classes.image } src={ rochesterLogo } />
 
         <div className={classes.footer}>
-          Made with <img className={classes.footerImage} src={ philadelphiaLogo } /> in Rochester, NY
+          Made with <img className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
           <br/>
           &copy; 2020 Snowcode, LLC
         </div>

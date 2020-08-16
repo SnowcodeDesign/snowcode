@@ -18,7 +18,12 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+  },
+  dialog: {
+  },
   title: {
+    background: theme.palette.primary.main,
     paddingTop: 24,
     paddingBottom: 10,
     borderBottom: '1px rgba(0,0,0,0.1) solid'
@@ -46,18 +51,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contentHeader: {
-    paddingTop: 10,
+    paddingTop: 16,
     paddingBottom: 20,
-    fontSize: '1.7rem',
+    fontSize: '1.8rem',
     letterSpacing: 0,
     lineHeight: 1.3,
     fontWeight: 800,
     textAlign: 'center',
-    color: 'rgba(0,0,0,1.0)'
+    color: theme.palette.secondary.contrastText,
   },
 
   contentSeparator: {
-    background: theme.palette.secondary.main,
     height: '3px',
     // width: 'calc(100% + 49px)',
     // marginLeft: '-25px',
@@ -77,9 +81,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   desktopTable: {
-    // background: 'purple',
     width: '100%',
-    paddingTop: 20,
+    paddingTop: 0,
+    background: 'rgba(255,255,255,1)',
+    borderRadius: 12,
+    boxShadow: '0px 0px 5px rgba(0,0,0,0.2)',
   },
 
   desktopRow: {
@@ -101,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
 
   desktopCell: {
     width: '25%',
-    padding: 10,
+    padding: 18,
     borderBottom: '1px solid rgba(0,0,0,0.05)',
     verticalAlign: 'top',
     display: 'table-cell',
@@ -159,7 +165,6 @@ const useStyles = makeStyles((theme) => ({
   desktopCellPriceCell: {
     width: '25%',
     padding: 10,
-    borderBottom: '1px solid rgba(0,0,0,0.05)',
     verticalAlign: 'bottom',
     display: 'table-cell',
   },
@@ -170,9 +175,15 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileTable: {
-    // background: 'purple',
+    background: 'rgba(255,255,255,1)',
+    borderRadius: 12,
+    boxShadow: '0px 0px 5px rgba(0,0,0,0.2)',
     width: '100%',
-    paddingTop: 20,
+    paddingTop: 0,
+
+    '& > tbody > tr:nth-child(2) > td': {
+      borderBottom: '1px solid rgba(0,0,0,0.05)',
+    }
   },
 
   mobileContent: {
@@ -184,8 +195,11 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileRow: {
+    '& > td': {
+      paddingTop: 20,
+    },
     '& > td:nth-child(1)': {
-      borderRight: '1px solid rgba(0,0,0,0.05)'
+      borderRight: '1px solid rgba(0,0,0,0.05)',
     },
   },
 
@@ -386,7 +400,7 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
   );
 
   return (
-    <div>
+    <div className={classes.root}>
       <Dialog
         open={open}
         keepMounted
@@ -395,8 +409,16 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
         aria-describedby="alert-dialog-slide-description"
         fullWidth
         fullScreen
-      >
-        <DialogTitle className={classes.title} id="alert-dialog-slide-title">
+        className={classes.dialog}
+        PaperProps={{
+          style: {
+            background: 'linear-gradient(7deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 51%, rgba(110,146,247,1) 52%, rgba(110,146,247,1) 100%)',
+          },
+      }}>
+        <DialogTitle 
+          className={classes.title} 
+          id="alert-dialog-slide-title" 
+        >
           <div className={classes.titleIcon}>
             <AcUnitIcon />
           </div>
@@ -431,7 +453,7 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
           <div className={classes.footer}>
             <SnowcodeRochesterLogo 
               theme={ theme }
-              useDark={ false}
+              useDark={ false }
             />
           </div>
         </DialogContent>

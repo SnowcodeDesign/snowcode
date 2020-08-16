@@ -28,7 +28,27 @@ const useStyles = makeStyles((theme) => ({
     width: '300px',
     textAlign: 'center',
     fontWeight: 800,
-    fontSize: '1.7rem'
+    fontSize: '1.7rem',
+
+    [theme.breakpoints.down(950)]: {
+      width: '240px',
+    },
+
+    [theme.breakpoints.down(750)]: {
+      width: '100vw',
+      display: 'block',
+    },
+  },
+  rootFeaturesCell: {
+    [theme.breakpoints.down(950)]: {
+      textAlign: 'center'
+    },
+
+    [theme.breakpoints.down(750)]: {
+      width: '100vw',
+      display: 'block',
+      textAlign: 'center',
+    },
   },
   rootTextCellButton: {
     marginTop: 10,
@@ -123,7 +143,7 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
               </div>
             </td>
 
-            <td>
+            <td className={classes.rootFeaturesCell}>
               { featuresTable }
             </td>
           </tr>
