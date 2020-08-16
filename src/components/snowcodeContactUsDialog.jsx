@@ -90,12 +90,12 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick }) {
           <DialogContentText>
 
             <div className={classes.content}>
-              Click below to send us an email! We're available <b>today</b> to get started. We are working on a way to chat with us directly, coming soon.
+              Click below to send us an email! We're available <b>today</b> to get started.
             </div>
 
             <div className={classes.button}>
               
-              <a className="mailtoui" href="mailto:snowcodedesign@gmail.com" style={{textDecoration: 'none'}}>
+              <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none'}}>
                 <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ handleSendEmailButtonClick }>
 
                   Send Email

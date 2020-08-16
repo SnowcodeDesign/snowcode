@@ -10,6 +10,7 @@ import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
 import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 import SnowcodeNewsletterJumbotron from '../components/snowcodeNewsletterJumbotron';
+import SnowcodePortfolioGrid from '../components/snowcodePortfolioGrid';
 
 import '../css/appearAnimation.css';
 import { makeStyles } from '@material-ui/core/styles';
@@ -135,6 +136,10 @@ export default function SnowcodeRootPage({ theme }) {
     <SnowcodeNewsletterJumbotron />
   );
 
+  const portfolioGridComponent = (
+    <SnowcodePortfolioGrid />
+  );
+
   const componentTree = [
     appBarComponent
   ].concat([
@@ -151,6 +156,7 @@ export default function SnowcodeRootPage({ theme }) {
     featuresGridComponent,
     locationsMapComponent,
     whatsIncludedTableComponent,
+    portfolioGridComponent
   ].map(e => {
     return (
       <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.8} animateOnce={true} offset={60}>

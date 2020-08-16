@@ -132,7 +132,7 @@ export default function SnowcodeSocialMediaLinks({}) {
               </td>
 
               <td className={classes.iconCell}>
-                <a className="mailtoui" href="mailto:snowcodedesign@gmail.com" target="_blank">
+                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
                   <EmailIcon />
                   </a>
               </td>
