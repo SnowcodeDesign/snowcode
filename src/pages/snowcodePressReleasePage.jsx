@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodePressReleasePage({ theme }) {
+export default function SnowcodePressReleasePage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
   const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
@@ -94,6 +94,7 @@ export default function SnowcodePressReleasePage({ theme }) {
     <SnowcodeContactUsDialog 
       open={ contactUsDialogOpen }
       onCloseClick={ handleContactUsCloseClick }
+      onFormSubmit={ onBuyNowFormSubmit }
     />
   );
 

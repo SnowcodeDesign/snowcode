@@ -16,11 +16,11 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
     padding: 20,
-    paddingBottom: 30
+    paddingBottom: 30,
+    overflow: 'hidden'
   },
   rootTable: {
     width: '100%',
-    maxWidth: '1000px',
     marginLeft: 'auto',
     marginRight: 'auto'
   },
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down(750)]: {
-      width: '100vw',
+      width: '100%',
       display: 'block',
     },
   },
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down(750)]: {
-      width: '100vw',
+      width: '100%',
       display: 'block',
       textAlign: 'center',
     },

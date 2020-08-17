@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6a56c1f592fe077d3b6718dc47b08e72",
+    "revision": "928162df0eb86775e0a90a46af6466ed",
     "url": "./index.html"
   },
   {
-    "revision": "b683aef68adb53ca88ef",
+    "revision": "903ff47e19004199ad25",
     "url": "./static/css/2.f01c5455.chunk.css"
   },
   {
-    "revision": "07cdfdf1c36c5e1032bd",
-    "url": "./static/css/main.c5f7cd7a.chunk.css"
+    "revision": "5470b2628fb48373c595",
+    "url": "./static/css/main.1be437f2.chunk.css"
   },
   {
-    "revision": "b683aef68adb53ca88ef",
-    "url": "./static/js/2.17ecb8e4.chunk.js"
+    "revision": "903ff47e19004199ad25",
+    "url": "./static/js/2.c78a9ba9.chunk.js"
   },
   {
-    "revision": "5e9b6f5c16b720e8a86875f97734673e",
-    "url": "./static/js/2.17ecb8e4.chunk.js.LICENSE.txt"
+    "revision": "bc645b8808bddaa3c0c8d72dff721b3b",
+    "url": "./static/js/2.c78a9ba9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "07cdfdf1c36c5e1032bd",
-    "url": "./static/js/main.4837672c.chunk.js"
+    "revision": "5470b2628fb48373c595",
+    "url": "./static/js/main.3a4cad0a.chunk.js"
   },
   {
     "revision": "5561a4792d5dc28a2d6e",
@@ -72,12 +72,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/Logo_of_Rochester,_New_York.38152d50.svg"
   },
   {
-    "revision": "86121f0cec469327d1432b8824dc4817",
-    "url": "./static/media/Screen Shot 2020-08-16 at 2.30.31 AM.86121f0c.png"
+    "revision": "ae4ff73623b7a6b5d6f28fdc601eeb6a",
+    "url": "./static/media/Screen Shot 2020-08-16 at 2.30.31 AM.ae4ff736.png"
   },
   {
-    "revision": "05f1c72e7e3904dcd24a9fcfd5a738d8",
-    "url": "./static/media/Screen_Shot_2020-07-09_at_5.31.47_PM.05f1c72e.png"
+    "revision": "883a6412838ad1e70cd083c13e8b3980",
+    "url": "./static/media/Screen Shot 2020-08-16 at 6.47.20 PM.883a6412.png"
+  },
+  {
+    "revision": "92606b860662af10077e6c5a851fc1d0",
+    "url": "./static/media/Screen Shot 2020-08-16 at 6.56.19 PM.92606b86.png"
+  },
+  {
+    "revision": "c4a4d8b267d64fcfaac6bf84805f3541",
+    "url": "./static/media/Screen Shot 2020-08-16 at 8.25.31 PM.c4a4d8b2.png"
+  },
+  {
+    "revision": "db0e6e8883e7f72fdba4b09ad951f6b0",
+    "url": "./static/media/Screen_Shot_2020-07-09_at_5.31.47_PM.db0e6e88.png"
   },
   {
     "revision": "11a397e701235917b859598af502a844",
@@ -92,7 +104,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/map.c1541633.png"
   },
   {
-    "revision": "4099c7c302e8c394fe0735547369eed0",
-    "url": "./static/media/screenie_schedule (1).4099c7c3.jpeg"
+    "revision": "d24c1a5faa098c2119ec3b7f4f4f4edd",
+    "url": "./static/media/screenie_schedule (1).d24c1a5f.jpeg"
   }
 ]);

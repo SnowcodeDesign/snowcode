@@ -153,13 +153,6 @@ export default function SnowcodeLocationsMap({ theme }) {
     </div>
   );
 
-  // const mapPanelSrcBaseURL = 'https://www.google.com/maps/embed/v1/place?';
-  // const mapPanelSrcAPIKey = 'AIzaSyBkQ13r0MFwuwaH3oBDOZ0FBJSD1QF0pBw';
-  // const mapPanelSrcAPIKeyQuery = `key=${mapPanelSrcAPIKey}`;
-  // const mapPanelSrcLocation = 'Rochester,NY+Philadelphia,PA';
-  // const mapPanelSrcLocationQuery = `&q=${mapPanelSrcLocation}`;
-  // const mapPanelSrc = `${mapPanelSrcBaseURL}${mapPanelSrcAPIKeyQuery}${mapPanelSrcLocationQuery}`;
-
   const mapPanel = (
     <div>
       <img className={classes.mapPanelImage} src={ map } />

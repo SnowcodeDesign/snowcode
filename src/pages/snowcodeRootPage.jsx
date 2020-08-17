@@ -12,10 +12,10 @@ import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
 import SnowcodeNewsletterJumbotron from '../components/snowcodeNewsletterJumbotron';
 import SnowcodePortfolioGrid from '../components/snowcodePortfolioGrid';
 
-import '../css/appearAnimation.css';
 import { makeStyles } from '@material-ui/core/styles';
 
 import "animate.css/animate.min.css";
+import '../css/appearAnimation.css';
 import ScrollAnimation from 'react-animate-on-scroll';
 
 const useStyles = makeStyles((theme) => ({
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodeRootPage({ theme }) {
+export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
   const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
@@ -125,6 +125,7 @@ export default function SnowcodeRootPage({ theme }) {
     <SnowcodeContactUsDialog 
       open={ contactUsDialogOpen }
       onCloseClick={ handleContactUsCloseClick }
+      onFormSubmit={ onBuyNowFormSubmit }
     />
   );
 
@@ -146,9 +147,9 @@ export default function SnowcodeRootPage({ theme }) {
     landingJumbotronComponent,
     pricingDialogComponent,
     contactUsDialogComponent
-  ].map(e => {
+  ].map((e, i) => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60} delay={i * 50}>
         { e }
       </ScrollAnimation>
     );
@@ -157,17 +158,17 @@ export default function SnowcodeRootPage({ theme }) {
     locationsMapComponent,
     whatsIncludedTableComponent,
     portfolioGridComponent
-  ].map(e => {
+  ].map((e, i) => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeInUp" duration={0.8} animateOnce={true} offset={60} delay={i * 75}>
         { e }
       </ScrollAnimation>
     );
   })).concat([
     newsletterJumbotronComponent,
-  ].map(e => {
+  ].map((e, i) => {
     return (
-      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60}>
+      <ScrollAnimation animateIn="animate__animated animate__fadeIn" duration={0.8} animateOnce={true} offset={60} delay={i * 100}>
         { e }
       </ScrollAnimation>
     );

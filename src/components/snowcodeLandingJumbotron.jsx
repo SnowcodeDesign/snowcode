@@ -128,11 +128,9 @@ export default function SnowcodeLandingJumbotron({ theme, onBuyNowClick, onPrici
         </div>
 
         <div className={classes.buttons}>
-          <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none', color: 'inherit'}}>
-            <Button color="secondary" variant="contained">
-              { primaryButton }
-            </Button>
-        </a>
+          <Button color="secondary" variant="contained" onClick={ onBuyNowClick } >
+            { primaryButton }
+          </Button>
 
           <Button variant="outlined" onClick={onPricingClick}>
             { secondaryButton }

@@ -95,14 +95,11 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
       >
         <MenuItem onClick={handlePricingClick}>Pricing</MenuItem>
 
-        <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none', color: 'inherit'}}>
 
         <MenuItem style={{
           background: theme.palette.secondary.main,
           color: theme.palette.secondary.contrastText
-        }}>Buy Now</MenuItem>
-
-        </a>
+        }} onClick={ handleBuyNowClick }>Buy Now</MenuItem>
       </Menu>
     </div>
   );
@@ -111,9 +108,7 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
     <div>
       <Button onClick={handlePricingClick} className={classes.toolbarButton}>Pricing <ExpandMoreIcon /></Button>
       
-
-      <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none', color: 'inherit'}}><Button variant="contained" color="secondary">Buy Now</Button></a>
-
+      <Button variant="contained" color="secondary" onClick={ onBuyNowClick }>Buy Now</Button>
     </div>
   );
 
