@@ -13,10 +13,12 @@ import AcUnitIcon from '@material-ui/icons/AcUnit';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
+const APP_BAR_BLUR_RADIUS = '10px';
+
 const useStyles = makeStyles((theme) => ({
   root: {
+    overflow: 'hidden',
     flexGrow: 1,
-    borderBottom: '0.5px rgba(0,0,0,0.1) solid'
   },
   menuButton: {
   },
@@ -57,8 +59,35 @@ const useStyles = makeStyles((theme) => ({
     color: 'inherit',
     textTransform: 'none',
     fontSize: '1.0rem',
-    fontWeight: 700,
+    fontWeight: 500,
     marginRight: 8,
+  },
+
+  blurContainer: {
+    zIndex: 0,
+    position: 'fixed',
+    left: 0,
+    right: 0,
+    height: '64px',
+    overflow: 'hidden',
+
+    [theme.breakpoints.down(600)]: {
+      height: '49px',
+    },
+
+    [theme.breakpoints.down(519)]: {
+      height: '55px',
+    },
+  },
+
+  blurBackground: {
+    zIndex: 0,
+    width: '100%',
+    height: '100%',
+
+    background: 'rgba(255, 255, 255, 0.2)',
+    'backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
+    '-webkit-backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
   }
 }));
 
@@ -118,7 +147,11 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
 
   return (
     <div className={classes.root}>
-      <AppBar position="fixed" elevation={0}>
+      <AppBar position="fixed" elevation={0} style={{ background: 'none' }}>
+        <div className={ classes.blurContainer }>
+          <div className={ classes.blurBackground } />
+        </div>
+
         <Toolbar className={classes.toolbar}>
           <IconButton edge="start" color="inherit" onClick={ onLogoClick }>
             <AcUnitIcon />

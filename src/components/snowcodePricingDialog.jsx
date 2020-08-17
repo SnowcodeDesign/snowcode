@@ -21,6 +21,23 @@ const useStyles = makeStyles((theme) => ({
   root: {
   },
   dialog: {
+    '& > .MuiDialog-container': {
+      background: 'none',
+    }
+  },
+  dialogContent: {
+    background: 'none',
+    padding: 0,
+  },
+  dialogContentText: {
+    background: 'linear-gradient(7deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 60%, rgba(255,255,255,1) 61%, rgba(110,146,247,1) 62%, rgba(110,146,247,1) 100%)',
+
+    [theme.breakpoints.down(809)]: {
+      background: 'linear-gradient(7deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 72%, rgba(255,255,255,1) 73%, rgba(110,146,247,1) 74%, rgba(110,146,247,1) 100%)',
+    },
+
+    padding: 0,
+    margin: 0,
   },
   title: {
     background: theme.palette.primary.main,
@@ -52,13 +69,33 @@ const useStyles = makeStyles((theme) => ({
 
   contentHeader: {
     paddingTop: 16,
-    paddingBottom: 20,
+    paddingBottom: 8,
     fontSize: '1.8rem',
     letterSpacing: 0,
     lineHeight: 1.3,
     fontWeight: 800,
     textAlign: 'center',
     color: theme.palette.secondary.contrastText,
+  },
+
+  contentHeaderSubtitle: {
+    fontSize: '0.9rem',
+    color: theme.palette.secondary.contrastText,
+    opacity: 0.65,
+    fontWeight: 600,
+    marginLeft: 'auto',
+    marginRight: 'auto',
+
+    maxWidth: '550px',
+
+
+    // [theme.breakpoints.down(630)]: {
+    //   maxWidth: '500px',
+    // },
+
+    [theme.breakpoints.down(630)]: {
+      maxWidth: '340px',
+    },
   },
 
   contentSeparator: {
@@ -68,6 +105,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   desktopContent: {
+    padding: 10,
     display: 'none',
     width: '100%',
 
@@ -187,6 +225,7 @@ const useStyles = makeStyles((theme) => ({
   },
 
   mobileContent: {
+    padding: 10,
     display: 'inline-block',
 
     [theme.breakpoints.up(809)]: {
@@ -412,7 +451,7 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
         className={classes.dialog}
         PaperProps={{
           style: {
-            background: 'linear-gradient(7deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 51%, rgba(110,146,247,1) 52%, rgba(110,146,247,1) 100%)',
+            background: 'none'
           },
       }}>
         <DialogTitle 
@@ -436,11 +475,15 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
           </IconButton>
         </DialogTitle>
         
-        <DialogContent>
-          <DialogContentText id="alert-dialog-slide-description">
+        <DialogContent className={ classes.dialogContent }>
+          <DialogContentText className={ classes.dialogContentText} id="alert-dialog-slide-description">
             
             <div className={classes.contentHeader}>
               Create your best work with us
+
+              <div className={classes.contentHeaderSubtitle}>
+                We only create new contracts that have competitive, market-price rates and rapid, Fortune-500 quality. <span style={{fontWeight: 800}}>Flexibility</span> and <span style={{fontWeight: 800}}>inclusivity</span> are two of Snowcode's core values. If you have a specific budget in mind already, reach out and we'll make it work!
+              </div>
             </div>
 
             <div className={classes.contentSeparator}>
@@ -448,14 +491,15 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
 
             { content }
 
-          </DialogContentText>
 
-          <div className={classes.footer}>
-            <SnowcodeRochesterLogo 
-              theme={ theme }
-              useDark={ false }
-            />
-          </div>
+            <div className={classes.footer}>
+              <SnowcodeRochesterLogo 
+                theme={ theme }
+                useDark={ false }
+              />
+            </div>
+
+          </DialogContentText>
         </DialogContent>
       </Dialog>
     </div>

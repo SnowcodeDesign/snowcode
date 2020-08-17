@@ -11,13 +11,16 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 140,
     paddingBottom: 140,
 
+    backgroundPosition: '0px 14px',
     background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(255, 255, 255, 1) 70%)`,
 
     marginTop: 50,
     [theme.breakpoints.down(600)]: {
-      marginTop: 52,
+      backgroundPosition: '0px 0px',
+      marginTop: 48,
     },
-    [theme.breakpoints.up(883)]: {
+    [theme.breakpoints.down(519)]: {
+      marginTop: 55,
     },
 
     // backgroundImage: `url(${snowcodeHeader})`,
