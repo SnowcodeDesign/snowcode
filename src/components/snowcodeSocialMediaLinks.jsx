@@ -7,6 +7,8 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import EmailIcon from '@material-ui/icons/Email';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
+import '@fortawesome/fontawesome-free/css/all.css';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     color: theme.palette.secondary.contrastText,
@@ -65,6 +67,10 @@ const useStyles = makeStyles((theme) => ({
     '& > a': {
       color: 'inherit',
       textDecoration: 'none'
+    },
+
+    '& > a > i': {
+      fontSize: '1.3rem'
     }
   },
   linkTable: {
@@ -115,31 +121,37 @@ export default function SnowcodeSocialMediaLinks({}) {
             <tr className={classes.iconRow}>
               <td className={classes.iconCell}>
                 <a href="http://twitter.com/snowcodedesign" target="_blank">
-                  <TwitterIcon />
+                  <i class="fab fa-twitter"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
                 <a href="http://github.com/snowcodedesign" target="_blank">
-                  <GitHubIcon />
+                  <i class="fab fa-github"></i>
+                </a>
+              </td>
+
+              <td className={classes.iconCell}>
+                <a href="https://angel.co/company/snowcodedesign" target="_blank">
+                  <i class="fab fa-angellist"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
-                  <InstagramIcon />
+                  <i class="fab fa-instagram"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
                 <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
-                  <EmailIcon />
-                  </a>
+                  <i class="fas fa-envelope"></i>
+                </a>
               </td>
 
               <td className={classes.iconCell}>
                 <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">
-                  <YouTubeIcon />
+                  <i class="fab fa-youtube"></i>
                 </a>
               </td>
             </tr>
@@ -172,7 +184,14 @@ export default function SnowcodeSocialMediaLinks({}) {
                 </a>
               </td>
             </tr>
-             <tr className={classes.linkRow}>
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="https://angel.co/company/snowcodedesign" target="_blank">
+                  AngelList
+                </a>
+              </td>
+            </tr>
+            <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
                   Instagram
