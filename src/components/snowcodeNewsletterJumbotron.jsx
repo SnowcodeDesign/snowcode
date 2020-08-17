@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import MailIcon from '@material-ui/icons/Mail';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
 
-import cloud from '../img/cloud.png';
+import photos from '../img/cloud.png';
+import letters from '../img/cloud-letters.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,10 +37,15 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   leftImage: {
-    objectFit: 'contain',
     width: '100%',
-    height: '100%',
+    height: '200px',
 
+    backgroundPosition: 'center',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    '-webkit-transition': 'all .3s ease-in-out',
+    '-moz-transition': 'all .3s ease-in-out',
+    'transition': 'all .3s ease-in-out',
 
     [theme.breakpoints.down(800)]: {
       width: '100%',
@@ -106,7 +112,7 @@ const useStyles = makeStyles((theme) => ({
 
 const DefaultNewsletterJumbotronModel = {
   left: {
-    image: cloud,
+    image: '',
   },
   right: {
     header: 'Subscribe To Our Newsletter',
@@ -131,12 +137,45 @@ export default function SnowcodeNewsletterJumbotron({ model = DefaultNewsletterJ
   }} />
   );
 
+  const [newsletterImage, setNewsletterImage] = React.useState(photos);
+
+  const beginWatchingTime = (callback1, callback2, completion, delay=1000) => {
+    const currentSecond = (new Date()).getSeconds();
+    if (currentSecond % 2 === 0) {
+      callback1();
+    } else {
+      callback2();
+    }
+
+    setTimeout(() => {
+      completion();
+    }, delay);
+  }
+
+  useEffect(() => {
+    const callback1 = () => {
+      setNewsletterImage(letters);
+    };
+    const callback2 = () => {
+      setNewsletterImage(photos);
+    };
+
+    let runloop = () => {};
+    runloop = () => {
+      beginWatchingTime(callback1, callback2, runloop);
+    };
+
+    runloop();
+  }, [beginWatchingTime, setNewsletterImage]);
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
 
         <div className={classes.left}>
-          <img className={classes.leftImage} src={ model.left.image } />
+          <div className={classes.leftImage} style={{
+            backgroundImage: `url(${newsletterImage})`
+          }} />
         </div>
 
         <div className={classes.right}>
