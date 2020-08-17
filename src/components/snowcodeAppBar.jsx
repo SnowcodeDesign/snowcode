@@ -55,7 +55,10 @@ const useStyles = makeStyles((theme) => ({
 
   toolbarButton: {
     color: 'inherit',
-    textTransform: 'none'
+    textTransform: 'none',
+    fontSize: '1.0rem',
+    fontWeight: 700,
+    marginRight: 8,
   }
 }));
 
@@ -107,7 +110,7 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
 
   const desktopToolbar = (
     <div>
-      <Button onClick={handlePricingClick} className={classes.toolbarButton}>Pricing <ExpandMoreIcon /></Button>
+      <Button onClick={handlePricingClick} className={classes.toolbarButton}>Pricing</Button>
       
       <Button variant="contained" color="secondary" onClick={ onBuyNowClick }>Buy Now</Button>
     </div>
