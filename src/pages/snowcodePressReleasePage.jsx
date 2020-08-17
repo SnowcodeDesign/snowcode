@@ -14,6 +14,12 @@ const useStyles = makeStyles((theme) => ({
   },
 
   root: {
+    paddingTop: 60,
+
+    [theme.breakpoints.down(600)]: {
+      paddingTop: 50,
+    },
+
 
     '& > *': {
 
