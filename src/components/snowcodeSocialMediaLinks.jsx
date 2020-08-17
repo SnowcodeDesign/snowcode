@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '900px',
 
     '& > * > table': {
-      paddingRight: 10,
+      paddingRight: 26,
     }
   },
   left: {
@@ -32,9 +32,11 @@ const useStyles = makeStyles((theme) => ({
   right: {
     display: 'inline-block',
     verticalAlign: 'top',
+    paddingTop: 6,
     paddingLeft: 0,
   },
   rightLink: {
+    paddingTop: 6,
     display: 'inline-block',
     verticalAlign: 'top',
     paddingLeft: 0,
@@ -53,7 +55,6 @@ const useStyles = makeStyles((theme) => ({
     tableLayout: 'fixed',
   },
   iconRow: {
-
   },
   iconCell: {
     paddingRight: 4,
@@ -138,6 +139,14 @@ export default function SnowcodeSocialMediaLinks({}) {
               </td>
 
               <td className={classes.iconCell}>
+                <a href="https://www.linkedin.com/company/snowcode/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </td>
+            </tr>
+
+            <tr className={classes.iconRow}>
+              <td className={classes.iconCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
                   <i class="fab fa-instagram"></i>
                 </a>
@@ -150,8 +159,15 @@ export default function SnowcodeSocialMediaLinks({}) {
               </td>
 
               <td className={classes.iconCell}>
+                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+                  <i class="fab fa-mailchimp"></i>
+                </a>
+              </td>
+
+
+              <td className={classes.iconCell}>
                 <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">
-                  <i class="fab fa-youtube"></i>
+                  <i class="fab fa-youtube-square"></i>
                 </a>
               </td>
             </tr>
@@ -164,12 +180,22 @@ export default function SnowcodeSocialMediaLinks({}) {
           <thead>
             <tr>
               <td>
-                SOCIAL MEDIA
+                CONTACT
               </td>
             </tr>
           </thead>
 
           <tbody>
+
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
+                  Email
+                </a>
+              </td>
+            </tr>
+
+
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="http://twitter.com/snowcodedesign" target="_blank">
@@ -177,6 +203,57 @@ export default function SnowcodeSocialMediaLinks({}) {
                 </a>
               </td>
             </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+
+      <div className={classes.rightLink}>
+        <table className={classes.linkTable}>
+          <thead>
+            <tr>
+              <td>
+                NEWS
+              </td>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="#" onClick={ handlePressClick }>
+                  Press
+                </a>
+              </td>
+            </tr>
+           
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+                  Newsletter
+                </a>
+              </td>
+            </tr> 
+
+          </tbody>
+        </table>
+      </div>
+
+      <div className={classes.rightLink}>
+        <table className={classes.linkTable}>
+          <thead>
+            <tr>
+              <td>
+                LINKS
+              </td>
+            </tr>
+          </thead>
+
+          <tbody>
+
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="https://github.com/snowcodedesign" target="_blank">
@@ -193,18 +270,38 @@ export default function SnowcodeSocialMediaLinks({}) {
             </tr>
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
+                <a href="https://www.linkedin.com/company/snowcode/" target="_blank">
+                  LinkedIn
+                </a>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+
+      <div className={classes.rightLink}>
+        <table className={classes.linkTable}>
+          <thead>
+            <tr>
+              <td>
+                SOCIAL MEDIA
+              </td>
+            </tr>
+          </thead>
+
+          <tbody>
+
+
+            <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
                 <a href="http://instagram.com/snowcodedesign" target="_blank">
                   Instagram
                 </a>
               </td>
             </tr>
-            <tr className={classes.linkRow}>
-              <td className={classes.linkCell}>
-                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
-                  Email
-                </a>
-              </td>
-            </tr>
+
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">
@@ -212,36 +309,7 @@ export default function SnowcodeSocialMediaLinks({}) {
                 </a>
               </td>
             </tr>
-          </tbody>
-        </table>
-      </div>
 
-      <div className={classes.rightLink}>
-        <table className={classes.linkTable}>
-          <thead>
-            <tr>
-              <td>
-                NEWS
-              </td>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr className={classes.linkRow}>
-              <td className={classes.linkCell}>
-                <a href="#" onClick={ handlePressClick }>
-                  Letter to the Community
-                </a>
-              </td>
-            </tr>
-
-            <tr className={classes.linkRow}>
-              <td className={classes.linkCell}>
-                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
-                  Newsletter
-                </a>
-              </td>
-            </tr>            
           </tbody>
         </table>
       </div>
