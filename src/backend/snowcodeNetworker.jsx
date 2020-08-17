@@ -3,7 +3,7 @@ import jquery from 'jquery';
 
 class SnowcodeNetworker {
   static baseURL() {
-    const url = preval`module.exports = process.env.REACT_APP_BASE_URL ? process.env.REACT_APP_BASE_URL : 'https://snowcode-backend.herokuapp.com'`;
+    const url = preval`module.exports = process.env.REACT_APP_BASE_URL ? process.env.REACT_APP_BASE_URL : 'https://snowcode.herokuapp.com'`;
     return url;
   }
 
