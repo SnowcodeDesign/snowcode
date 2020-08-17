@@ -151,21 +151,6 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick, onFormSubm
               We're available <b>today</b> to get started.
             </div>
 
-            <div className={classes.button}>
-              
-              <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none'}}>
-                <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ handleSendEmailButtonClick }>
-
-                  Send Email
-
-                </Button>
-              </a>
-            </div>
-
-            <div className={classes.separator}>
-              &mdash; OR &mdash;
-            </div>
-
             <div className={classes.form}>
 
               <TextField
@@ -209,8 +194,23 @@ export default function SnowcodeContactUsDialog({ open, onCloseClick, onFormSubm
                 startIcon={ <InsertDriveFileIcon /> }
                 onClick={ handleFormSendButtonClick }
               >
-                Send Form
+                Submit
               </Button>
+            </div>
+
+            <div className={classes.separator}>
+              &mdash; OR &mdash;
+            </div>
+
+            <div className={classes.button}>
+              
+              <a className="mailtoui" href="mailto:julian@snowcode.design" style={{textDecoration: 'none'}}>
+                <Button variant="contained" color="secondary" fullWidth startIcon={<MailOutlineIcon />} onClick={ handleSendEmailButtonClick }>
+
+                  Write Email
+
+                </Button>
+              </a>
             </div>
 
           </DialogContentText>
