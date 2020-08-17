@@ -70,12 +70,20 @@ const useStyles = makeStyles((theme) => ({
   contentHeader: {
     paddingTop: 16,
     paddingBottom: 8,
+    paddingLeft: 20,
+    paddingRight: 20,
     fontSize: '1.8rem',
     letterSpacing: 0,
     lineHeight: 1.3,
     fontWeight: 800,
     textAlign: 'center',
     color: theme.palette.secondary.contrastText,
+
+    [theme.breakpoints.down(630)]: {
+      maxWidth: '380px',
+      marginRight: 'auto',
+      marginLeft: 'auto'
+    },
   },
 
   contentHeaderSubtitle: {
@@ -85,7 +93,6 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 600,
     marginLeft: 'auto',
     marginRight: 'auto',
-
     maxWidth: '550px',
 
 
