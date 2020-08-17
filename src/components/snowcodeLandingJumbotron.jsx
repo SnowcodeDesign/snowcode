@@ -13,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
 
     background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(255, 255, 255, 1) 70%)`,
 
+    marginTop: 50,
+    [theme.breakpoints.down(600)]: {
+      marginTop: 52,
+    },
+    [theme.breakpoints.up(883)]: {
+    },
+
     // backgroundImage: `url(${snowcodeHeader})`,
     // backgroundRepeat: 'no-repeat',
     // backgroundColor: theme.palette.primary.main,

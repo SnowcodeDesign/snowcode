@@ -71,7 +71,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'none',
     width: '100%',
 
-    [theme.breakpoints.up(640)]: {
+    [theme.breakpoints.up(809)]: {
       display: 'block',
 
       maxWidth: '900px',
@@ -189,7 +189,7 @@ const useStyles = makeStyles((theme) => ({
   mobileContent: {
     display: 'inline-block',
 
-    [theme.breakpoints.up(640)]: {
+    [theme.breakpoints.up(809)]: {
       display: 'none',
     },
   },

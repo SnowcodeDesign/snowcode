@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '1000px',
     marginLeft: 'auto',
     marginRight: 'auto',
+    borderBottom: '0.6px rgba(0,0,0,0.05) solid',
   },
   title: {
     flexGrow: 1,
@@ -114,7 +115,7 @@ export default function SnowcodeAppBar({ theme, onPricingClick, onBuyNowClick, o
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" elevation={0}>
+      <AppBar position="fixed" elevation={0}>
         <Toolbar className={classes.toolbar}>
           <IconButton edge="start" color="inherit" onClick={ onLogoClick }>
             <AcUnitIcon />
