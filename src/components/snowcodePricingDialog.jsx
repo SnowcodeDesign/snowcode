@@ -22,7 +22,8 @@ const useStyles = makeStyles((theme) => ({
   },
   dialog: {
     '& > .MuiDialog-container': {
-      background: 'none',
+       background: 'linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 42%, rgba(255,255,255,1) 43%, rgba(110,146,247,1) 44%, rgba(110,146,247,1) 100%)',
+
     }
   },
   dialogContent: {
