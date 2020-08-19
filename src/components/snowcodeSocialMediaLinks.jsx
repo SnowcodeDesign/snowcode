@@ -302,6 +302,14 @@ export default function SnowcodeSocialMediaLinks({}) {
               </td>
             </tr>
 
+           <tr className={classes.linkRow}>
+              <td className={classes.linkCell}>
+                <a href="https://www.producthunt.com/@snowcodedesign" target="_blank">
+                  Product Hunt
+                </a>
+              </td>
+            </tr>
+
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
                 <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">

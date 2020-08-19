@@ -76,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
     },
 
     [theme.breakpoints.down(519)]: {
-      height: '55px',
+      height: '49px',
     },
   },
 
@@ -84,10 +84,15 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 0,
     width: '100%',
     height: '100%',
+    background: 'rgba(255, 255, 255, 0.95)',
+  },
 
-    background: 'rgba(255, 255, 255, 0.2)',
-    'backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
-    '-webkit-backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
+  '@supports ((-webkit-backdrop-filter: blur(2em)) or (backdrop-filter: blur(2em)))' : {
+    blurBackground: {
+      background: 'rgba(255, 255, 255, 0.2)',
+      'backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
+      '-webkit-backdrop-filter': `blur(${APP_BAR_BLUR_RADIUS}) saturate(125%)`,
+    }
   }
 }));
 
