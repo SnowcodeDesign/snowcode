@@ -3,7 +3,7 @@
 
 ## See live at [http://snowcode.design](http://snowcode.design)!
 
-![](collage.jpg)
+![](collage_fixed.jpg)
 
 ### Setting project up
 
