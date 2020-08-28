@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: '1000px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    borderBottom: '0.6px rgba(0,0,0,0.05) solid',
   },
   title: {
     flexGrow: 1,
@@ -70,6 +69,7 @@ const useStyles = makeStyles((theme) => ({
     right: 0,
     height: '64px',
     overflow: 'hidden',
+    borderBottom: '0.6px rgba(0,0,0,0.05) solid',
 
     [theme.breakpoints.down(600)]: {
       height: '49px',

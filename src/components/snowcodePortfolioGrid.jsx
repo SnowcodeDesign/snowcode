@@ -9,7 +9,8 @@ import leaf from '../img/Screen Shot 2020-08-16 at 2.30.31 AM.png';
 import exefel from '../img/screenie_schedule (1).jpeg';
 import jillaweiss from '../img/Screen Shot 2020-08-16 at 6.47.20 PM.png';
 import coffee from '../img/Screen Shot 2020-08-16 at 6.56.19 PM.png';
-import constantine from '../img/Screen Shot 2020-08-16 at 8.25.31 PM.png';
+// import constantine from '../img/Screen Shot 2020-08-16 at 8.25.31 PM.png';
+import sundial from '../img/Screen Shot 2020-08-27 at 9.00.35 PM.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -57,6 +58,12 @@ export default function SnowcodePortfolioGrid({}) {
   const theme = useTheme();
 
   const portfolioItems = [{
+    image: sundial,
+    caption: '',
+    title: 'sundial.click',
+    subtitle: "🌤 free, open source todo webapp",
+    button: "http://sundial.click"
+  }, {
     image: leaf,
     caption: '',
     title: 'myleaf.fun',
@@ -74,12 +81,6 @@ export default function SnowcodePortfolioGrid({}) {
     title: 'gardenguide.fun',
     subtitle: "💐 flower breeding & growing guide",
     button: "http://gardenguide.fun"
-  }, {
-    image: constantine,
-    caption: '',
-    title: 'Constantine Raykovskyy',
-    subtitle: "🛠 brooklyn-based contractor",
-    button: 'https://constantineraykovskyy.com/',
   }, {
     image: exefel,
     caption: '',
