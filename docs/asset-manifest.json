@@ -1,25 +1,28 @@
 {
   "files": {
     "main.css": "./static/css/main.1be437f2.chunk.css",
-    "main.js": "./static/js/main.547a55d0.chunk.js",
-    "main.js.map": "./static/js/main.547a55d0.chunk.js.map",
+    "main.js": "./static/js/main.73d6d714.chunk.js",
+    "main.js.map": "./static/js/main.73d6d714.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d9e7314b.js",
     "runtime-main.js.map": "./static/js/runtime-main.d9e7314b.js.map",
     "static/css/2.b8648198.chunk.css": "./static/css/2.b8648198.chunk.css",
-    "static/js/2.13f2ef69.chunk.js": "./static/js/2.13f2ef69.chunk.js",
-    "static/js/2.13f2ef69.chunk.js.map": "./static/js/2.13f2ef69.chunk.js.map",
+    "static/js/2.28a71180.chunk.js": "./static/js/2.28a71180.chunk.js",
+    "static/js/2.28a71180.chunk.js.map": "./static/js/2.28a71180.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.9774fda27d43d812117b9f52220a2792.js": "./precache-manifest.9774fda27d43d812117b9f52220a2792.js",
+    "precache-manifest.a23e9df2eb42822723a18cbab4ab790f.js": "./precache-manifest.a23e9df2eb42822723a18cbab4ab790f.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.b8648198.chunk.css.map": "./static/css/2.b8648198.chunk.css.map",
     "static/css/main.1be437f2.chunk.css.map": "./static/css/main.1be437f2.chunk.css.map",
-    "static/js/2.13f2ef69.chunk.js.LICENSE.txt": "./static/js/2.13f2ef69.chunk.js.LICENSE.txt",
+    "static/js/2.28a71180.chunk.js.LICENSE.txt": "./static/js/2.28a71180.chunk.js.LICENSE.txt",
+    "static/media/460x0w.png": "./static/media/460x0w.e24ecba0.png",
+    "static/media/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.png": "./static/media/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.f5711515.png",
     "static/media/fonts.css": "./static/media/Lato-ThinItalic.4ac7208b.ttf",
     "static/media/Logo_of_Rochester,_New_York.svg": "./static/media/Logo_of_Rochester,_New_York.38152d50.svg",
     "static/media/Screen Shot 2020-08-16 at 2.30.31 AM.png": "./static/media/Screen Shot 2020-08-16 at 2.30.31 AM.ae4ff736.png",
     "static/media/Screen Shot 2020-08-16 at 6.47.20 PM.png": "./static/media/Screen Shot 2020-08-16 at 6.47.20 PM.883a6412.png",
     "static/media/Screen Shot 2020-08-16 at 6.56.19 PM.png": "./static/media/Screen Shot 2020-08-16 at 6.56.19 PM.92606b86.png",
     "static/media/Screen Shot 2020-08-27 at 9.00.35 PM.png": "./static/media/Screen Shot 2020-08-27 at 9.00.35 PM.24d44f96.png",
+    "static/media/Screen Shot 2020-09-03 at 3.51.59 PM.png": "./static/media/Screen Shot 2020-09-03 at 3.51.59 PM.23a9c36e.png",
     "static/media/Screen_Shot_2020-07-09_at_5.31.47_PM.png": "./static/media/Screen_Shot_2020-07-09_at_5.31.47_PM.db0e6e88.png",
     "static/media/cloud-letters.png": "./static/media/cloud-letters.67f50097.png",
     "static/media/cloud.png": "./static/media/cloud.11a397e7.png",
@@ -31,8 +34,8 @@
   "entrypoints": [
     "static/js/runtime-main.d9e7314b.js",
     "static/css/2.b8648198.chunk.css",
-    "static/js/2.13f2ef69.chunk.js",
+    "static/js/2.28a71180.chunk.js",
     "static/css/main.1be437f2.chunk.css",
-    "static/js/main.547a55d0.chunk.js"
+    "static/js/main.73d6d714.chunk.js"
   ]
 }

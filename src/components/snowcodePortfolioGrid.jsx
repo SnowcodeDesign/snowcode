@@ -11,6 +11,9 @@ import jillaweiss from '../img/Screen Shot 2020-08-16 at 6.47.20 PM.png';
 import coffee from '../img/Screen Shot 2020-08-16 at 6.56.19 PM.png';
 // import constantine from '../img/Screen Shot 2020-08-16 at 8.25.31 PM.png';
 import sundial from '../img/Screen Shot 2020-08-27 at 9.00.35 PM.png';
+import there from '../img/Screen Shot 2020-09-03 at 3.51.59 PM.png';
+import keysmith from '../img/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.png';
+import submarine from '../img/460x0w.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -58,17 +61,29 @@ export default function SnowcodePortfolioGrid({}) {
   const theme = useTheme();
 
   const portfolioItems = [{
+    image: leaf,
+    caption: '',
+    title: 'myleaf.fun',
+    subtitle: "🐝 powerful animal crossing webapp",
+    button: "http://myleaf.fun"
+  }, {
+    image: submarine,
+    caption: '',
+    title: 'Submarine Two',
+    subtitle: '🎉 our reddit app without compromises',
+    button: 'https://submarineforios.com/'
+  }, {
     image: sundial,
     caption: '',
     title: 'sundial.click',
     subtitle: "🌤 free, open source todo webapp",
     button: "http://sundial.click"
   }, {
-    image: leaf,
+    image: there,
     caption: '',
-    title: 'myleaf.fun',
-    subtitle: "🐝 minimal animal crossing webapp",
-    button: "http://myleaf.fun"
+    title: 'there.click',
+    subtitle: '🐲 keep track of everything webapp',
+    button: 'https://there.click'
   }, {
     image: jillaweiss,
     caption: '',
@@ -87,6 +102,12 @@ export default function SnowcodePortfolioGrid({}) {
     title: 'exefel',
     subtitle: "🏈 unofficial xfl stats app for iOS",
     button: "https://github.com/insanj/exefel"
+  }, {
+    image: keysmith,
+    caption: '',
+    title: 'keysmith',
+    subtitle: '🔐 mini mac app to save new logins',
+    button: 'https://github.com/SnowcodeDesign/keysmith'
   }, {
     image: coffee,
     caption: '',
