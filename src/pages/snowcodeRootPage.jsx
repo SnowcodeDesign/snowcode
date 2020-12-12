@@ -1,6 +1,7 @@
 import React from 'react';
 
 import SnowcodeAppBar from '../components/snowcodeAppBar';
+import SnowcodeWhirlBanner from '../components/snowcodeWhirlBanner';
 import SnowcodeLandingJumbotron from '../components/snowcodeLandingJumbotron';
 import SnowcodeFeaturesGrid from '../components/snowcodeFeaturesGrid';
 import SnowcodeWhatsIncludedTable from '../components/snowcodeWhatsIncludedTable';
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
-  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
+  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(true);
   const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(false);
 
   const handlePricingClick = () => {
@@ -73,6 +74,13 @@ export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
       onLogoClick={ handleLogoClick }
       onPricingClick={ handlePricingClick }
       onBuyNowClick={ handleContactUsClick }
+    />
+  );
+
+  const whirlBannerComponent = (
+    <SnowcodeWhirlBanner
+      theme={ theme }
+      onLearnMoreClick={ handlePricingClick }
     />
   );
 
@@ -142,7 +150,8 @@ export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
   );
 
   const componentTree = [
-    appBarComponent
+    appBarComponent,
+    whirlBannerComponent,
   ].concat([
     landingJumbotronComponent,
     pricingDialogComponent,

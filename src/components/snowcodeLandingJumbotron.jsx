@@ -14,14 +14,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundPosition: '0px 0px',
     background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(255, 255, 255, 1) 70%)`,
 
-    marginTop: 62,
-    [theme.breakpoints.down(600)]: {
-      backgroundPosition: '0px 0px',
-      marginTop: 48,
-    },
-    [theme.breakpoints.down(519)]: {
-      marginTop: 49,
-    },
+    marginTop: 0,
 
     // backgroundImage: `url(${snowcodeHeader})`,
     // backgroundRepeat: 'no-repeat',
@@ -54,31 +47,7 @@ const useStyles = makeStyles((theme) => ({
   //     backgroundPosition: 'center'
   //   },
   // },
-  rootBackground: {
-    position: 'absolute',
-    left: 0,
-    width: '100%',
-    top: 60,
-    height: '420px',
-    pointerEvents: 'none',
-
-    opacity: 0.7,
-    backgroundImage: `url(${snowcodeHeader})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-    backgroundPosition: 'right',
-
-    [theme.breakpoints.down(650)]: {
-      backgroundSize: 'cover',
-    },
-
-
-    [theme.breakpoints.down(515)]: {
-      height: '470px',
-      backgroundSize: 'cover'
-    },
-
-  },
+  
   rootContainer: {
     width: '100%',
     maxWidth: '900px',

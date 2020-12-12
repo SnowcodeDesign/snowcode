@@ -69,14 +69,16 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contentHeader: {
-    paddingTop: 16,
-    paddingBottom: 8,
+    paddingTop: 32,
+    paddingBottom: 26,
     paddingLeft: 20,
     paddingRight: 20,
-    fontSize: '1.8rem',
+
+    fontSize: '40px',
+    fontWeight: 300,
+    lineHeight: 1,
+
     letterSpacing: 0,
-    lineHeight: 1.3,
-    fontWeight: 800,
     textAlign: 'center',
     color: theme.palette.secondary.contrastText,
 
@@ -88,14 +90,17 @@ const useStyles = makeStyles((theme) => ({
   },
 
   contentHeaderSubtitle: {
-    fontSize: '0.9rem',
+    paddingTop: 18,
+
+    fontSize: '20px',
     color: theme.palette.secondary.contrastText,
-    opacity: 0.65,
+    opacity: 0.8,
     fontWeight: 600,
     marginLeft: 'auto',
     marginRight: 'auto',
     maxWidth: '550px',
 
+    lineHeight: 1.2,
 
     // [theme.breakpoints.down(630)]: {
     //   maxWidth: '500px',
@@ -164,7 +169,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     lineHeight: 1,
     fontWeight: 800,
-    color: 'rgba(0,0,0,1)'
+    color: theme.palette.secondary.main
   },
 
   desktopCellDescription: {
@@ -271,43 +276,39 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
   const classes = useStyles();
 
   const desktopCellItems = [{
-    title: 'Individual',
+    title: 'Flurries',
     description: (
       <span>
-      {'For new businesses and professionals looking to build an online presence. From apps to websites, we can create a whole lot with a tiny budget. Try to find our suite of services for cheaper!'}<br/><br/>
+      {'Break free from Wix, Squarespace, Shopify, and one size fits all solutions. Flurries is for artists, social media influencers, new businesses, and creative professionals looking to build an online presence. From online shops to professional-grade portfolios, we can create a whole lot with a teensy tiny budget. Try to find our suite of services for cheaper!'}<br/><br/>
       </span>)
     ,
     prices: {
-      'mo': '$500',
-      'hr': '$25'
+      'mo': '$25',
     },
-    bullets: [
-      'a landing site, portfolio, social media, or blog format'
-    ]
   }, {
-    title: 'Small Business',
+    title: 'Artisan',
     description: (
       <span>
-      {'Build a platform for your growing business with the most competitive prices available. From landing pages to cross-platform social networks, get your big idea in front of the world.'}<br/><br/>
+      {'Craftsmanship with a serious set of expertise. Build a platform for your ideas, feed content into your growing projects, and publish cutting-edge concepts with the most competitive prices available. From frequently-updated restaurant pages to fledgling social media publications, get your passion in front of the world quickly and with confidence.'}<br/><br/>
       </span>)
     ,
     prices: { 
-      'mo': '$1,000',
-      'hr': '$50'
+      'site': '$300',
+      'mo': '$25',
     }
   }, {
-    title: 'Large Business',
+    title: 'Growing',
     description: (
       <span>
-      {'Answer the big questions about your business. Create cross-platform networks, deep production testing, in-house architecture review and refactoring, at-scale database management.'}<br/><br/>
+      {'A dedicated agent and all of our on-demand services at the best rate for a growing small business. Create cross-platform social media networks and apps for iOS and Android, scale to handle thousands of users, and deploy multiple projects at the same time without needing any other content providers, marketing representatives, or software development teams.'}<br/><br/>
       </span>),
     prices: { 
-      'mo': '$2,000',
-      'hr': '$100'
+      'site': '$1,000',
+      'mo': '$250',
     }
   }, {
     title: 'Enterprise',
-    description: 'Bring our whole team of engineers and artists on board to tackle extremely ambitious technological feats. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'
+    description: 'Bring on board a whole team of engineers and artists to tackle extremely ambitious creative and technological feats. Answer the big questions about your company and your customers without breaking the bank. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'
     ,
   }];
 
@@ -487,10 +488,11 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
           <DialogContentText className={ classes.dialogContentText} id="alert-dialog-slide-description">
             
             <div className={classes.contentHeader}>
-              Create your best work with us
+              
+              Ready to build something <b>great</b>?
 
               <div className={classes.contentHeaderSubtitle}>
-                We only create new contracts that have competitive, market-price rates and rapid, Fortune-500 quality. <span style={{fontWeight: 800}}>Flexibility</span> and <span style={{fontWeight: 800}}>inclusivity</span> are two of Snowcode's core values. If you have a specific budget in mind already, reach out and we'll make it work!
+                <span style={{fontWeight: 800}}>Flexibility</span> and <span style={{fontWeight: 800}}>inclusivity</span> are two of Snowcode's core values. If you have a specific budget in mind already, reach out and we'll make it work!
               </div>
             </div>
 
