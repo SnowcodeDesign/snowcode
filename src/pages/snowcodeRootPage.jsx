@@ -6,7 +6,6 @@ import SnowcodeLandingJumbotron from '../components/snowcodeLandingJumbotron';
 import SnowcodeFeaturesGrid from '../components/snowcodeFeaturesGrid';
 import SnowcodeWhatsIncludedTable from '../components/snowcodeWhatsIncludedTable';
 import SnowcodeLocationsMap from '../components/snowcodeLocationsMap';
-import SnowcodePricingDialog from '../components/snowcodePricingDialog';
 import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
 import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
@@ -35,15 +34,12 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
-  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
-  const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(false);
+  const contactUsInitiallyOpen = window.location.pathname && window.location.pathname.length >= '/contact'.length && window.location.pathname.substring(0, '/contact'.length) === '/contact';
+  const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(contactUsInitiallyOpen);
 
   const handlePricingClick = () => {
-    setPricingDialogOpen(true);
-  }
-
-  const handlePricingCloseClick = () => {
-    setPricingDialogOpen(false);
+    const baseURL = process.env.REACT_APP_FRONT_URL;
+    window.location = `${baseURL}/pricing`;
   }
 
   const handleContactUsClick = () => {
@@ -54,18 +50,9 @@ export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
     setContactUsDialogOpen(false);
   }
 
-  const handlePricingGetStartedClick = () => {
-    setPricingDialogOpen(false);
-    setContactUsDialogOpen(true);
-  }
-
-  const handlePricingContactUsClick = () => {
-    setPricingDialogOpen(false);
-    setContactUsDialogOpen(true);
-  }
-
   const handleLogoClick = () => {
-    window.location = 'https://snowcode.design/';
+    const baseURL = process.env.REACT_APP_FRONT_URL;
+    window.location = baseURL;
   }
   
   const appBarComponent = (
@@ -119,16 +106,6 @@ export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
     />
   );
 
-  const pricingDialogComponent = (
-    <SnowcodePricingDialog 
-      theme={ theme }
-      open={ pricingDialogOpen }
-      onCloseClick={ handlePricingCloseClick }
-      onGetStartedClick={ handlePricingGetStartedClick }
-      onContactUsClick={ handlePricingContactUsClick }
-    />
-  );
-
   const contactUsDialogComponent = (
     <SnowcodeContactUsDialog 
       open={ contactUsDialogOpen }
@@ -154,7 +131,6 @@ export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
     whirlBannerComponent,
   ].concat([
     landingJumbotronComponent,
-    pricingDialogComponent,
     contactUsDialogComponent
   ].map((e, i) => {
     return (

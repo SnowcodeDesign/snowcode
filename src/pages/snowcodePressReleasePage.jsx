@@ -61,9 +61,10 @@ export default function SnowcodePressReleasePage({ theme, onBuyNowFormSubmit }) 
   }
 
   const handleLogoClick = () => {
-    window.location = 'https://snowcode.design/';
+    const baseURL = process.env.REACT_APP_FRONT_URL;
+    window.location = baseURL;
   }
-
+  
   const appBarComponent = (
     <SnowcodeAppBar
       theme={ theme }

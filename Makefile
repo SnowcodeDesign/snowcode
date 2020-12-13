@@ -7,6 +7,9 @@ PUBLIC_URL=snowcode.design
 LOCAL_URL=http://$(IP_ADDRESS):8080
 FRONT_URL=http://$(IP_ADDRESS):3000
 
+REMOTE_URL=https://snowcode.herokuapp.com
+REMOTE_FRONT_URL=https://snowcode.design
+
 .PHONY: serve
 serve: env
 	echo "REACT_APP_BASE_URL=$(LOCAL_URL)" >> .env
@@ -15,6 +18,8 @@ serve: env
 
 .PHONY: build
 build: env
+	echo "REACT_APP_BASE_URL=$(REMOTE_URL)" >> .env
+	echo "REACT_APP_FRONT_URL=$(REMOTE_FRONT_URL)" >> .env
 	npm run build
 	rm -r -f docs
 	mv build docs

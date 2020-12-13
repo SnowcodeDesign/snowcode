@@ -103,7 +103,8 @@ export default function SnowcodeSocialMediaLinks({}) {
   const classes = useStyles();
 
   const handlePressClick = () => {
-    window.location = "https://snowcode.design?press";
+    const baseURL = process.env.REACT_APP_FRONT_URL;
+    window.location = `${baseURL}/press`;
   }
 
   return (

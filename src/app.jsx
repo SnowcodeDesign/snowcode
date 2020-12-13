@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import SnowcodeRootPage from './pages/snowcodeRootPage';
 import SnowcodePressReleasePage from './pages/snowcodePressReleasePage';
+import SnowcodePricingPage from './pages/snowcodePricingPage';
 import SnowcodeNetworker from './backend/snowcodeNetworker';
 
 import './css/fonts.css';
@@ -47,19 +48,44 @@ export default function App({ }) {
     });
   }
 
-  const currentPath = window.location.search;
-  const isCurrentPathPressRelease = currentPath && currentPath.length > 0 && currentPath === '?press';
-  const page = !isCurrentPathPressRelease ? (
+  const rootPage = (
     <SnowcodeRootPage 
       theme={theme}
       onBuyNowFormSubmit={ handleBuyNowFormSubmit }
     />
-  ) : (
-    <SnowcodePressReleasePage
+  );
+
+  const pricingPage = (
+    <SnowcodePricingPage 
       theme={theme}
       onBuyNowFormSubmit={ handleBuyNowFormSubmit }
     />
   );
+
+  const pressReleasePage = (
+    <SnowcodePressReleasePage
+      theme={theme}
+    />
+  );
+
+  const page = () => {
+    const currentPath = window.location.pathname;
+    if (!currentPath || currentPath.length < 1) {
+      return rootPage;
+    } 
+    
+    const pricingPath = '/pricing';
+    if (currentPath.length >= pricingPath.length && currentPath.substring(0, pricingPath.length) === pricingPath) {
+      return pricingPage;
+    }
+        
+    const pressPath = '/press';
+    if (currentPath.length >= pressPath.length && currentPath.substring(0, pressPath.length) === pressPath) {
+      return pressReleasePage;
+    }
+    
+    return rootPage;
+  }
 
   return (
     <div className={classes.root}>
@@ -67,7 +93,7 @@ export default function App({ }) {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           
-          { page }
+          { page() }
 
         </ThemeProvider>
       </div>
