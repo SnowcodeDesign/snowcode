@@ -82,7 +82,7 @@ export default function SnowcodeLandingJumbotron({ theme, onBuyNowClick, onPrici
   const classes = useStyles();
 
   const title = "Bring your work to life ";
-  const titleSuffix = "online";
+  const titleSuffix = "online.";
   const body = (
     <div>
     {'Cutting-edge websites and apps for everyone.'}

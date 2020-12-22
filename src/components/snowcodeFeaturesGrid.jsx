@@ -6,6 +6,12 @@ import BrushIcon from '@material-ui/icons/Brush';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import ReceiptIcon from '@material-ui/icons/Receipt';
 
+import AppleIcon from '@material-ui/icons/Apple';
+import AndroidIcon from '@material-ui/icons/Android';
+import AdbIcon from '@material-ui/icons/Adb';
+
+import cPlusPlus from '../img/c_plus_plus.svg';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     padding: 30,
@@ -66,10 +72,10 @@ export default function SnowcodeFeaturesGrid({ theme }) {
   const classes = useStyles();
 
   const headerTitle = "Let us design, develop, and deploy ";
-  const headerTitleSuffix = "your next big idea";
+  const headerTitleSuffix = "your next big idea.";
   const headerBody = (
     <span>
-      <b>Snowcode</b> {' is a contract software development and design firm with a pool of artists and creatives. We create high-end software, video production, and graphic design for the lowest market price.'}
+      <b>Snowcode</b> {' is a contract software development and design firm with a pool of artists and creatives. We create high-end websites, apps, video production, and graphic design for the lowest market price.'}
     </span>
   );
 
@@ -87,27 +93,28 @@ export default function SnowcodeFeaturesGrid({ theme }) {
 
   const gridCells = [{
     image: <CodeIcon />,
-    title: 'Full-stack development',
-    body: 'From iOS to Android, desktop websites to progessive web apps, we offer a competitive range of frontend and backend technology.',
+    title: 'Full Stack Development',
+    body: 'Web, iOS, Android, Windows, Mac, and everything in between. We offer an exceptional range of services with above and beyond customer support.',
   }, {
     image: (
       <BrushIcon />
     ),
-    title: 'Graphic design',
-    body: 'With both full-time and freelance artists, we provide on-demand graphic design to brands as well as UI/UX design for products.',
+    title: 'Graphic Design',
+    body: 'Your imagination is powerful. With full-time designers and freelance artists, we provide both art services to brands and user interface design to products.',
   }, {
     image: (
       <VideocamIcon />
     ),
-    title: 'Video production',
-    body: 'Using the very best in video and audio production software, we can create immersive audio-visual experiences and brand content.',
+    title: 'Video Production',
+    body: 'Push quality content to your community. We use the very best in audio-video production tools to create immersive cinematograpy and marketing experiences.',
   }, {
     image: (
       <ReceiptIcon />
     ),
-    title: 'Flexible contracts',
-    body: 'We have a personal, 1-on-1 business philosophy. Instead of one-offs, we prefer long-term contracts that fit your specific needs.',
+    title: 'Flexible Contracts',
+    body: 'Already know what you need? We have a personal, hands-on business philosophy. We support one-offs and long-term contracts to fit your specific interests.',
   }];
+
   const gridCellComponents = gridCells.map(cell => {
     return (
       <div className={classes.cell}>
@@ -123,12 +130,13 @@ export default function SnowcodeFeaturesGrid({ theme }) {
       </div>
     );
   });
+
   const gridComponent = (
     <div className={classes.grid}>
      { gridCellComponents }
     </div>
   );
-
+  
   return (
     <div className={classes.root}>
       { headerComponent }

@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '1.6rem',
     fontWeight: 700,
     paddingTop: 10,
-    paddingBottom: 10,
+    paddingBottom: 5,
   },
   grid: {
     textAlign: 'center',
@@ -53,6 +53,17 @@ const useStyles = makeStyles((theme) => ({
         wordBreak: 'break-all'
       }  
     },
+  },
+
+  blurb: {
+    fontSize: '0.9rem',
+    color: 'rgba(0,0,0,0.5)',
+    marginTop: 0,
+    maxWidth: '600px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    textAlign: 'center',
+    paddingBottom: 20
   }
 }));
 
@@ -133,7 +144,11 @@ export default function SnowcodePortfolioGrid({}) {
         </div>
 
         <div className={classes.header}>
-          See what we've built already &amp; <span style={{ color: theme.palette.secondary.main }}> get inspired</span>
+          See what we've built already &amp; <span style={{ color: theme.palette.secondary.main }}> get inspired.</span>
+        </div>
+
+        <div className={classes.blurb}>
+          We encourage clients to publish and share their amazing work. The majority of our <b>Snowcode</b> in-house projects are available free and open source under the permissive MIT or GPL.
         </div>
 
         <div className={classes.grid}>
