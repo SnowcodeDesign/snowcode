@@ -314,7 +314,7 @@ export default function SnowcodePricingPage({ theme, onBuyNowFormSubmit }) {
 
   const handleButtonClick = () => {
     const baseURL = process.env.REACT_APP_FRONT_URL;
-    window.location = `${baseURL}/contact`;
+    window.location = `${baseURL}/?contact`;
   }
 
   const appBarComponent = (

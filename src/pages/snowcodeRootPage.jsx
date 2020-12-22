@@ -34,12 +34,12 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodeRootPage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
-  const contactUsInitiallyOpen = window.location.pathname && window.location.pathname.length >= '/contact'.length && window.location.pathname.substring(0, '/contact'.length) === '/contact';
+  const contactUsInitiallyOpen = window.location.search && window.location.search === "?contact"; //pathname && window.location.pathname.length >= '/contact'.length && window.location.pathname.substring(0, '/contact'.length) === '/contact';
   const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(contactUsInitiallyOpen);
 
   const handlePricingClick = () => {
     const baseURL = process.env.REACT_APP_FRONT_URL;
-    window.location = `${baseURL}/pricing`;
+    window.location = `${baseURL}/?pricing`;
   }
 
   const handleContactUsClick = () => {

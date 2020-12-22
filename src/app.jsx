@@ -69,18 +69,20 @@ export default function App({ }) {
   );
 
   const page = () => {
-    const currentPath = window.location.pathname;
+    const currentPath = window.location.search;
     if (!currentPath || currentPath.length < 1) {
       return rootPage;
     } 
     
-    const pricingPath = '/pricing';
-    if (currentPath.length >= pricingPath.length && currentPath.substring(0, pricingPath.length) === pricingPath) {
+    const pricingPath = '?pricing';
+    // if (currentPath.length >= pricingPath.length && currentPath.substring(0, pricingPath.length) === pricingPath) {
+    if (currentPath === pricingPath) {
       return pricingPage;
     }
         
-    const pressPath = '/press';
-    if (currentPath.length >= pressPath.length && currentPath.substring(0, pressPath.length) === pressPath) {
+    const pressPath = '?press';
+    // if (currentPath.length >= pressPath.length && currentPath.substring(0, pressPath.length) === pressPath) {
+    if (currentPath === pressPath) { 
       return pressReleasePage;
     }
     
