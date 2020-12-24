@@ -1,13 +1,8 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import EmailIcon from '@material-ui/icons/Email';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
-import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-pro/css/all.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -99,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SnowcodeSocialMediaLinks({}) {
+export default function SnowcodeSocialMediaLinks() {
   const classes = useStyles();
 
   const handlePressClick = () => {
@@ -122,25 +117,25 @@ export default function SnowcodeSocialMediaLinks({}) {
           <tbody>
             <tr className={classes.iconRow}>
               <td className={classes.iconCell}>
-                <a href="http://twitter.com/snowcodedesign" target="_blank">
+                <a href="http://twitter.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-twitter"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
-                <a href="http://github.com/snowcodedesign" target="_blank">
+                <a href="http://github.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-github"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
-                <a href="https://angel.co/company/snowcodedesign" target="_blank">
+                <a href="https://angel.co/company/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-angellist"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
-                <a href="https://www.linkedin.com/company/snowcode/" target="_blank">
+                <a href="https://www.linkedin.com/company/snowcode/" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-linkedin"></i>
                 </a>
               </td>
@@ -148,26 +143,26 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.iconRow}>
               <td className={classes.iconCell}>
-                <a href="http://instagram.com/snowcodedesign" target="_blank">
+                <a href="http://instagram.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-instagram"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
-                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
+                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank" rel="noopener noreferrer">
                   <i class="fas fa-envelope"></i>
                 </a>
               </td>
 
               <td className={classes.iconCell}>
-                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-mailchimp"></i>
                 </a>
               </td>
 
 
               <td className={classes.iconCell}>
-                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">
+                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-youtube-square"></i>
                 </a>
               </td>
@@ -190,7 +185,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank">
+                <a className="mailtoui" href="mailto:julian@snowcode.design" target="_blank" rel="noopener noreferrer"> 
                   Email
                 </a>
               </td>
@@ -199,7 +194,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="http://twitter.com/snowcodedesign" target="_blank">
+                <a href="http://twitter.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   Twitter
                 </a>
               </td>
@@ -225,7 +220,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="#" onClick={ handlePressClick }>
+                <a href="/?press" onClick={ handlePressClick }>
                   Press
                 </a>
               </td>
@@ -233,7 +228,7 @@ export default function SnowcodeSocialMediaLinks({}) {
            
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+                <a href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   Newsletter
                 </a>
               </td>
@@ -257,21 +252,21 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://github.com/snowcodedesign" target="_blank">
+                <a href="https://github.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   GitHub
                 </a>
               </td>
             </tr>
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://angel.co/company/snowcodedesign" target="_blank">
+                <a href="https://angel.co/company/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   AngelList
                 </a>
               </td>
             </tr>
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://www.linkedin.com/company/snowcode/" target="_blank">
+                <a href="https://www.linkedin.com/company/snowcode/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
                 </a>
               </td>
@@ -297,7 +292,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="http://instagram.com/snowcodedesign" target="_blank">
+                <a href="http://instagram.com/snowcodedesign" target="_blank" rel="noopener noreferrer">
                   Instagram
                 </a>
               </td>
@@ -305,7 +300,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
            <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://www.producthunt.com/@snowcodedesign" target="_blank">
+                <a href="https://www.producthunt.com/@snowcodedesign" target="_blank" rel="noopener noreferrer">
                   Product Hunt
                 </a>
               </td>
@@ -313,7 +308,7 @@ export default function SnowcodeSocialMediaLinks({}) {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank">
+                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank" rel="noopener noreferrer">
                   YouTube
                 </a>
               </td>

@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-        
         marginTop: 62,
         [theme.breakpoints.down(600)]: {
             marginTop: 48,
@@ -40,7 +39,7 @@ export default function SnowcodeWhirlBanner({ theme, onLearnMoreClick }) {
 
   return (
     <div className={classes.root}>
-        🎄 New for December: <b>Snowcode Flurries</b> starting at <b>$25/mo</b>. <div className={classes.link} onClick={onLearnMoreClick}>Learn more.</div>
+        <span role="img" aria-label="Holiday Tree">🎄</span> New for December: <b>Snowcode Flurries</b> starting at <b>$25/mo</b>. <div className={classes.link} onClick={onLearnMoreClick}>Learn more.</div>
     </div>
   );
 }

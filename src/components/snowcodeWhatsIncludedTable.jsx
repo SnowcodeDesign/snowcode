@@ -88,7 +88,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   platformGroup: {
-    textAlign: 'center'
+    textAlign: 'center',
+    margin: 'auto'
   },
 
   platformCell: {
@@ -118,7 +119,14 @@ const useStyles = makeStyles((theme) => ({
       height: 38,
       width: 38,
     }
+  },
 
+  maxSizeBR: {
+    display: 'block',
+
+    [theme.breakpoints.down(915)]: {
+      display: 'none',
+    },
   }
 }));
 
@@ -298,6 +306,14 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     )
   }, {
     image: (
+      <i class="fab fa-wordpress-simple"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-weebly"></i>
+    )
+  }, {
+    image: (
       <i class="fab fa-bootstrap"></i>
     )
   }, {
@@ -310,6 +326,14 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     )
   }, {
     image: (
+      <i class="fab fa-sketch"></i>
+    )
+  }, {
+    image: ( 
+      <i class="fab fa-buffer"></i>
+    )
+  }, {
+    image: (
       <i class="fab fa-atlassian"></i>
     )
   },  {
@@ -318,19 +342,15 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     )
   }, {
     image: (
+      <i class="fas fa-raygun"></i>
+    )
+  }, {
+    image: (
       <i class="fab fa-algolia"></i>
     )
   }, {
     image: (
-      <i class="fab fa-mailchimp"></i>
-    )
-  }, {
-    image: (
       <i class="fab fa-invision"></i>
-    )
-  },  {
-    image: (
-      <i class="fab fa-cpanel"></i>
     )
   }, {
     image: (
@@ -343,6 +363,22 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
   }, {
     image: (
       <i class="fab fa-less"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-npm"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-cpanel"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-yarn"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-intercom"></i>
     )
   }];
 
@@ -364,15 +400,7 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     image: (
       <i class="fab fa-gitlab"></i>
     )
-  }, {
-    image: (
-      <i class="fab fa-intercom"></i>
-    )
-  }, {
-    image: (
-      <i class="fab fa-lastfm"></i>
-    )
-  }, {
+  },  {
     image: (
       <i class="fab fa-reddit-alien"></i>
     )
@@ -382,7 +410,11 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     )
   }, {
     image: (
-      <i class="fab fa-soundcloud"></i>
+      <i class="fab fa-salesforce"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-mailchimp"></i>
     )
   }, {
     image: (
@@ -392,25 +424,21 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     image: (
       <i class="fab fa-stripe-s"></i>
     )
-  }];
-
-  const integrationElementComponents = integrationElements.map(cell => {
-    return (
-      <div className={classes.platformCell}>
-        <div className={classes.platformImage}>
-          { cell.image }
-        </div>
-      </div>
-    );
-  });
-
-  const networkElements = [{
+  }, {
     image: (
-      <i class="fab fa-angellist"></i>
+      <i class="fab fa-paypal"></i>
     )
   }, {
     image: (
-      <i class="fab fa-bandcamp"></i>
+      <i class="fab fa-yelp"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-stack-overflow"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-twitch"></i>
     )
   }, {
     image: (
@@ -426,23 +454,47 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     )
   }, {
     image: (
-      <i class="fab fa-lastfm"></i>
+      <i class="fab fa-angellist"></i>
     )
   }, {
     image: (
       <i class="fab fa-linkedin"></i>
     )
-  }, {
+  }, 
+  {},
+  {
     image: (
-      <i class="fab fa-stack-overflow"></i>
+      <i class="fab fa-product-hunt"></i>
     )
   }, {
     image: (
       <i class="fab fa-twitter"></i>
     )
+  }, {
+    image: (
+      <i class="fab fa-tumblr"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-soundcloud"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-bandcamp"></i>
+    )
+  }, {
+    image: (
+      <i class="fab fa-lastfm"></i>
+    )
   }];
 
-  const networkElementComponents = networkElements.map(cell => {
+  const integrationElementComponents = integrationElements.map(cell => {
+    if (!cell.image) {
+      return (
+        <div className={classes.maxSizeBR}></div>
+      );
+    }
+
     return (
       <div className={classes.platformCell}>
         <div className={classes.platformImage}>
@@ -471,7 +523,7 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
       </div>
 
       <div className={classes.textPanelHeader}>
-        TOOLS
+        TOOLS &amp; LIBRARIES
       </div>
 
       <div className={classes.platformGroup}>
@@ -479,19 +531,11 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
       </div>
 
       <div className={classes.textPanelHeader}>
-        INTEGRATIONS
+        INTEGRATIONS &amp; NETWORKS
       </div>
 
       <div className={classes.platformGroup}>
         { integrationElementComponents }
-      </div>
-
-      <div className={classes.textPanelHeader}>
-        NETWORKS
-      </div>
-
-      <div className={classes.platformGroup}>
-        { networkElementComponents }
       </div>
     </div>
   );

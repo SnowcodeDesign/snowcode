@@ -2,7 +2,6 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
@@ -10,10 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
-import MarkunreadMailboxIcon from '@material-ui/icons/MarkunreadMailbox';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import Draggable from 'react-draggable';
-import Paper from '@material-ui/core/Paper';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 
 const useStyles = makeStyles((theme) => ({
@@ -63,14 +59,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: 20
   }
 }));
-
-function PaperComponent(props) {
-  return (
-    <Draggable handle="#draggable-dialog-title" cancel={'[class*="MuiDialogContent-root"]'}>
-      <Paper {...props} />
-    </Draggable>
-  );
-}
 
 export default function SnowcodeContactUsDialog({ open, onCloseClick, onFormSubmit }) {
   const classes = useStyles();

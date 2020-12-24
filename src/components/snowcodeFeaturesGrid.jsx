@@ -1,16 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import AcUnitIcon from '@material-ui/icons/AcUnit';
 import CodeIcon from '@material-ui/icons/Code';
 import BrushIcon from '@material-ui/icons/Brush';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import ReceiptIcon from '@material-ui/icons/Receipt';
-
-import AppleIcon from '@material-ui/icons/Apple';
-import AndroidIcon from '@material-ui/icons/Android';
-import AdbIcon from '@material-ui/icons/Adb';
-
-import cPlusPlus from '../img/c_plus_plus.svg';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 
     maxWidth: '1000px',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
   },
   gridTable: {
     width: '100%',
@@ -49,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     display: 'inline-block',
     padding: 10,
+    verticalAlign: 'top',
 
     [theme.breakpoints.up('sm')]: {
       width: '50%',
@@ -75,7 +69,7 @@ export default function SnowcodeFeaturesGrid({ theme }) {
   const headerTitleSuffix = "your next big idea.";
   const headerBody = (
     <span>
-      <b>Snowcode</b> {' is a contract software development and design firm with a pool of artists and creatives. We create high-end websites, apps, video production, and graphic design for the lowest market price.'}
+      <b>Snowcode</b> {' is a software development and design company with a pool of artists and creatives. We create high-end websites, apps, video production, and graphic design for the lowest market price.'}
     </span>
   );
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 
 import SnowcodePortfolioCard from './snowcodePortfolioCard';
 
@@ -67,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodePortfolioGrid({}) {
+export default function SnowcodePortfolioGrid() {
   const classes = useStyles();
   const theme = useTheme();
 
@@ -128,7 +127,7 @@ export default function SnowcodePortfolioGrid({}) {
   }];
   const portfolioCards = portfolioItems.map(item => {
     return (
-      <a href={ item.button } target="_blank">
+      <a href={ item.button } target="_blank" rel="noopener noreferrer">
         <SnowcodePortfolioCard
           item={ item }
         />

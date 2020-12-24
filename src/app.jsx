@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function App({ }) {
+export default function App() {
   const classes = useStyles();
   const networker = new SnowcodeNetworker();
 

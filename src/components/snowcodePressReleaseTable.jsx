@@ -36,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function SnowcodePressReleaseTable({}) {
+export default function SnowcodePressReleaseTable() {
   const classes = useStyles();
 
   return (

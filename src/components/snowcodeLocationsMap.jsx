@@ -155,7 +155,7 @@ export default function SnowcodeLocationsMap({ theme }) {
 
   const mapPanel = (
     <div>
-      <img className={classes.mapPanelImage} src={ map } />
+      <img className={classes.mapPanelImage} src={ map } alt="Map" />
     </div>
   );
 

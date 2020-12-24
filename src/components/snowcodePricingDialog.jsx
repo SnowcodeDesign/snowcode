@@ -1,21 +1,15 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 import { makeStyles } from '@material-ui/core/styles';
 
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
-
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
-});
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -311,43 +305,6 @@ export default function SnowcodePricingDialog({ theme, open, onCloseClick, onGet
     description: 'Bring on board a whole team of engineers and artists to tackle extremely ambitious creative and technological feats. Answer the big questions about your company and your customers without breaking the bank. Our crew will work full-time to develop programming, graphic design, video production, and audio engineering work around the clock.'
     ,
   }];
-
-  const desktopCells = desktopCellItems.map(item => {
-    return (
-      <td className={classes.desktopCell}>
-        <div className={classes.desktopCellTitle}>
-          {item.title}
-        </div>
-
-        <div className={classes.desktopCellDescription}>
-          {item.description}
-        </div>
-
-        { !item.prices ? (
-          <div className={classes.desktopCellPrice} />
-        ) : (
-          <div className={classes.desktopCellPrice}>
-            { Object.keys(item.prices).map(time => {
-              return (
-                <div>
-                  { item.prices[time] }
-                  <span className={classes.desktopCellPriceSuffix}>
-                    /{ time }
-                  </span>
-                </div>
-              );
-            }) }
-          </div>
-        ) }
-
-        <div className={classes.getStartedButton}>
-          <Button fullWidth variant="contained" color="secondary" onClick={onGetStartedClick}>
-            Get Started
-          </Button>
-        </div>
-      </td>
-    );
-  });
 
   const desktopTitleDescriptionCells = desktopCellItems.map(item => {
     return (

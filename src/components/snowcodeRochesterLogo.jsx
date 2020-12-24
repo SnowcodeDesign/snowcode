@@ -51,12 +51,12 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
   return (
     <div className={classes.root} style={ rootStyle }>
       <center>
-        <img className={ classes.image } src={ rochesterLogo } />
+        <img className={ classes.image } src={ rochesterLogo } alt="Rochester" />
 
-        <a target='_blank' href="https://github.com/SnowcodeDesign/snowcode">
+        <a target='_blank' href="https://github.com/SnowcodeDesign/snowcode" rel="noopener noreferrer">
           <Tooltip title={ composedTooltipString } arrow placement="top">
             <div className={classes.footer}>
-              Made with <img className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
+              Made with <img alt="love" className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
               <br/>
               &copy; 2020 Snowcode, LLC
             </div>

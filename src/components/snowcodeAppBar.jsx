@@ -10,8 +10,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const APP_BAR_BLUR_RADIUS = '10px';
 

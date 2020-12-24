@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 
-import snowcodeHeader from '../img/header-icons.png';
+import Snowfall from 'react-snowfall'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,43 +10,33 @@ const useStyles = makeStyles((theme) => ({
     paddingRight: 20,
     paddingTop: 140,
     paddingBottom: 140,
-
-    backgroundPosition: '0px 0px',
-    background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(255, 255, 255, 1) 70%)`,
-
     marginTop: 0,
 
-    // backgroundImage: `url(${snowcodeHeader})`,
-    // backgroundRepeat: 'no-repeat',
-    // backgroundColor: theme.palette.primary.main,
+    background: `linear-gradient(220deg, rgba(100,147,255,0.7), rgba(255, 255, 255, 1) 70%)`,
+    backgroundPosition: '0px 0px',
+    backgroundSize: '200% 200%',
 
-    // backgroundSize: 'contain',
-    // backgroundPosition: 'center',
-    // // [theme.breakpoints.up(1130)]: {
-    // //   backgroundSize: 'contain',
-    // //   backgroundPosition: 'right',
-    // // },
-    // [theme.breakpoints.down(883)]: {
-    //   backgroundSize: 'cover',
-    // },
-    // [theme.breakpoints.up(883)]: {
-    //   backgroundPosition: 'right',
-    // },
-
-    // animation: '$backgroundTransform 5s ease-in-out',
+    animation: '$backgroundTransform 10s ease-in-out alternate infinite',
   },
 
-  // "@keyframes backgroundTransform" : {
-  //   '0%': {
-  //     backgroundPosition: '0px 0px'
-  //   },
-  //   '44%': {
-  //     backgroundPosition: '50px 0px'
-  //   },
-  //   '77%': {
-  //     backgroundPosition: 'center'
-  //   },
-  // },
+  "@keyframes backgroundTransform" : {
+    '25%': {
+      backgroundSize: '200% 200%',
+      backgroundPosition: '10% 0%'
+    },
+    '50%': {
+      backgroundSize: '200% 200%',
+      backgroundPosition: '30% 0%'
+    },
+    '75%': {
+      backgroundSize: '200% 200%',
+      backgroundPosition: '20% 20%'
+    },
+    '0%': {
+      backgroundSize: '100% 100%',
+      backgroundPosition: '0px 0px'
+    }
+  },
   
   rootContainer: {
     width: '100%',
@@ -96,6 +86,11 @@ export default function SnowcodeLandingJumbotron({ theme, onBuyNowClick, onPrici
 
   return (
     <div className={classes.root}>
+      <Snowfall
+        color="rgba(255,255,255,0.66)"
+        snowflakeCount={200}
+      />
+
       <div className={classes.rootBackground} />
       <div className={classes.rootContainer}>
         <div className={classes.title}>

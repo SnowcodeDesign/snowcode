@@ -1,21 +1,11 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import Slide from '@material-ui/core/Slide';
-import IconButton from '@material-ui/core/IconButton';
-import CloseIcon from '@material-ui/icons/Close';
 import AcUnitIcon from '@material-ui/icons/AcUnit';
 
-import SnowcodeAppBar from '../components/snowcodeAppBar';
-import SnowcodePricingDialog from '../components/snowcodePricingDialog';
-import SnowcodeContactUsDialog from '../components/snowcodeContactUsDialog';
-import SnowcodeSocialMediaLinks from '../components/snowcodeSocialMediaLinks';
 import SnowcodeRochesterLogo from '../components/snowcodeRochesterLogo';
-import SnowcodePressReleaseTable from '../components/snowcodePressReleaseTable';
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -278,68 +268,10 @@ const useStyles = makeStyles((theme) => ({
 export default function SnowcodePricingPage({ theme, onBuyNowFormSubmit }) {
   const classes = useStyles();
 
-  const [pricingDialogOpen, setPricingDialogOpen] = React.useState(false);
-  const [contactUsDialogOpen, setContactUsDialogOpen] = React.useState(false);
-
-  const handlePricingClick = () => {
-    setPricingDialogOpen(true);
-  }
-
-  const handlePricingCloseClick = () => {
-    setPricingDialogOpen(false);
-  }
-
-  const handleContactUsClick = () => {
-    setContactUsDialogOpen(true);
-  }
-
-  const handleContactUsCloseClick = () => {
-    setContactUsDialogOpen(false);
-  }
-
-  const handlePricingGetStartedClick = () => {
-    setPricingDialogOpen(false);
-    setContactUsDialogOpen(true);
-  }
-
-  const handlePricingContactUsClick = () => {
-    setPricingDialogOpen(false);
-    setContactUsDialogOpen(true);
-  }
-
-  const handleLogoClick = () => {
-    const baseURL = process.env.REACT_APP_FRONT_URL;
-    window.location = baseURL;
-  }
-
   const handleButtonClick = () => {
     const baseURL = process.env.REACT_APP_FRONT_URL;
     window.location = `${baseURL}/?contact`;
   }
-
-  const appBarComponent = (
-    <SnowcodeAppBar
-      theme={ theme }
-      onLogoClick={ handleLogoClick }
-      onPricingClick={ handlePricingClick }
-      onBuyNowClick={ handleContactUsClick }
-    />
-  );
-
-  const footerComponent = (
-    <SnowcodeRochesterLogo 
-      theme={ theme }
-      useDark={ true }
-    />
-  );
-
-  const contactUsDialogComponent = (
-    <SnowcodeContactUsDialog 
-      open={ contactUsDialogOpen }
-      onCloseClick={ handleContactUsCloseClick }
-      onFormSubmit={ onBuyNowFormSubmit }
-    />
-  );
 
   const desktopCellItems = [{
     title: 'Flurries',
@@ -378,42 +310,7 @@ export default function SnowcodePricingPage({ theme, onBuyNowFormSubmit }) {
     ,
   }];
 
-  const desktopCells = desktopCellItems.map(item => {
-    return (
-      <td className={classes.desktopCell}>
-        <div className={classes.desktopCellTitle}>
-          {item.title}
-        </div>
-
-        <div className={classes.desktopCellDescription}>
-          {item.description}
-        </div>
-
-        { !item.prices ? (
-          <div className={classes.desktopCellPrice} />
-        ) : (
-          <div className={classes.desktopCellPrice}>
-            { Object.keys(item.prices).map(time => {
-              return (
-                <div>
-                  { item.prices[time] }
-                  <span className={classes.desktopCellPriceSuffix}>
-                    /{ time }
-                  </span>
-                </div>
-              );
-            }) }
-          </div>
-        ) }
-
-        <div className={classes.getStartedButton}>
-          <Button fullWidth variant="contained" color="secondary" onClick={handleButtonClick}>
-            Get Started
-          </Button>
-        </div>
-      </td>
-    );
-  });
+  
 
   const desktopTitleDescriptionCells = desktopCellItems.map(item => {
     return (

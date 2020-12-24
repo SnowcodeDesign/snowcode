@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import MailIcon from '@material-ui/icons/Mail';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
 
 import photos from '../img/cloud.png';
@@ -123,50 +121,20 @@ const DefaultNewsletterJumbotronModel = {
 export default function SnowcodeNewsletterJumbotron({ model = DefaultNewsletterJumbotronModel }) {
   const classes = useStyles();
 
-  const textField = (
-    <TextField 
-  id="outlined-basic" 
-  label="Enter your email" 
-  variant="outlined"  
-  fullWidth
-  color="primary"
-  InputProps={{
-    endAdornment: (
-      <InputAdornment className={classes.adornment} position="start"><MailIcon /></InputAdornment>
-    ),
-  }} />
-  );
-
   const [newsletterImage, setNewsletterImage] = React.useState(photos);
 
-  const beginWatchingTime = (callback1, callback2, completion, delay=1000) => {
-    const currentSecond = (new Date()).getSeconds();
-    if (currentSecond % 2 === 0) {
-      callback1();
-    } else {
-      callback2();
-    }
-
-    setTimeout(() => {
-      completion();
-    }, delay);
-  }
-
   useEffect(() => {
-    const callback1 = () => {
-      setNewsletterImage(letters);
-    };
-    const callback2 = () => {
-      setNewsletterImage(photos);
-    };
+    
+    setInterval(() => {
+      const currentSecond = (new Date()).getSeconds();
+      if (currentSecond % 2 === 0) {
+        setNewsletterImage(letters);
+      } else {
+        setNewsletterImage(photos);
+      }
+    }, 1000);
 
-    let runloop = () => {};
-    runloop = () => {
-      beginWatchingTime(callback1, callback2, runloop);
-    };
-
-    runloop();
-  }, [beginWatchingTime, setNewsletterImage]);
+  }, [setNewsletterImage]);
 
   return (
     <div className={classes.root}>
@@ -189,7 +157,7 @@ export default function SnowcodeNewsletterJumbotron({ model = DefaultNewsletterJ
           </div>
 
           <div className={classes.rightInputField}>
-            <a style={{color: 'inherit', textDecoration: 'none'}} href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank">
+            <a style={{color: 'inherit', textDecoration: 'none'}} href="https://mailchi.mp/388e33ad3858/snowcodedesign" target="_blank" rel="noopener noreferrer">
               <Button startIcon={ <MailIcon /> } variant="contained" color="primary" fullWidth>
                 Enter Email Address
               </Button>
