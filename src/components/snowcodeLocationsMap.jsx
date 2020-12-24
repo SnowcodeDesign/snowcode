@@ -77,6 +77,8 @@ const useStyles = makeStyles((theme) => ({
     height: '300px',
     objectFit: 'contain',
     objectPosition: 'right',
+    pointerEvents: 'none',
+    userSelect: 'none',
 
     [theme.breakpoints.down('xs')]: {
       paddingTop: 20,
@@ -94,7 +96,7 @@ export default function SnowcodeLocationsMap({ theme }) {
   const textPanelBodyText = 'Based in Rochester, NY, we primarily work remotely using state-of-the-art tech. Before founding our own company, our work was mostly focused in the New York City and Philadelphia region.';
 
   const textPanelFirstNumberVal = '20+';
-  const textPanelFirstNumberLabel = 'Active Members';
+  const textPanelFirstNumberLabel = 'Active Collaborators';
 
   const textPanelSecondNumberVal = '170+';
   const textPanelSecondNumberLabel = 'Open Source Projects';
