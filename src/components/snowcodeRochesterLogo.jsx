@@ -34,6 +34,14 @@ const useStyles = makeStyles((theme) => ({
   footerImage: {
     width: '10px',
     height: '10px'
+  },
+
+  attribution: {
+    fontSize: "12px",
+    fontWeight: 400,
+    textAlign: 'justify',
+    padding: "10px 40px 10px 40px",
+    maxWidth: "800px"
   }
 }));
 
@@ -59,6 +67,10 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
               Made with <img alt="love" className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
               <br/>
               &copy; 2020 Snowcode, LLC
+
+              <div className={classes.attribution}>
+              The following organization and/or company trademarks and/or copyrighted icons are used to represent their respective organizations and/or companies and are not meant to represent any affiliation or connection between Snowcode, LLC and said organizations or companies: Apple (Apple, Inc), Windows (Microsoft), Google Play (Google), Chrome (Google), Ubuntu, Github, Discord, Slack, Amazon, Swift (Apple, Inc), Javascript, Python, Kotlin, HTML5, CSS3, PHP, PHP, Java, C++, Vue.js, React.js, Squarespace, Wix, Wordpress, Weebly, Bootstrap, Angular, Node.js, Sketch, Buffer, Atlassian, Docker, Phaser, Algolia, Invision, Markdown, Jenkins, Less, NPM, cPanel, Yarn, Intercom, Foursquare, Gitlab, Reddit, Shopify, Salesforce, Mailchimp, Spotify, Stripe, Paypal, Yelp, StackOverflow, Twitch, Behance, Dribbble, Instagram (Facebook), AngelList, LinkedIn, Product Hunt, Twitter, Tumblr, Soundcloud, Bandcamp, Last.fm. These marks and/or brand images are not owned by Snowcode, LLC and are instead owned by their respective organizations and/or companies as listed above, registered in the U.S. and other countries. If anyone wishes to have a mark removed, please reach out immediately. Thanks so much! :)
+              </div>
             </div>
           </Tooltip>
           </a>
