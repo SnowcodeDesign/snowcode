@@ -84,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 20,
       objectPosition: 'center'
     }
-  }
+  },
+
 }));
 
 export default function SnowcodeLocationsMap({ theme }) {
@@ -93,7 +94,7 @@ export default function SnowcodeLocationsMap({ theme }) {
   const textPanelHeaderText = 'LOCATIONS';
   const textPanelTitlePrefix = 'We are remote-first';
   const textPanelTitleText = 'with clients across the east coast.';
-  const textPanelBodyText = 'Based in Rochester, NY, we primarily work remotely using state-of-the-art tech. Before founding our own company, our work was mostly focused in the New York City and Philadelphia region.';
+  const textPanelBodyText = 'Based in Rochester, NY, we work remotely and with local businesses using state-of-the-art tech. Before founding our own company, our work was mostly focused in the New York City and Philadelphia region.';
 
   const textPanelFirstNumberVal = '20+';
   const textPanelFirstNumberLabel = 'Active Collaborators';

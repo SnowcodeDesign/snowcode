@@ -1,31 +1,35 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32fc75164dc85b1eee4aa5d0c0133549",
+    "revision": "eddcbada545d3f3ac4be00797fbb6896",
     "url": "./index.html"
   },
   {
-    "revision": "1d027633fdb1a8c506e5",
+    "revision": "5b27aacc2efc77974e96",
     "url": "./static/css/2.835d4cfd.chunk.css"
   },
   {
-    "revision": "3a680e537db2919e2889",
+    "revision": "8dab56448665586bc012",
     "url": "./static/css/main.e4a45287.chunk.css"
   },
   {
-    "revision": "1d027633fdb1a8c506e5",
-    "url": "./static/js/2.82bc7c36.chunk.js"
+    "revision": "5b27aacc2efc77974e96",
+    "url": "./static/js/2.7f280ed5.chunk.js"
   },
   {
     "revision": "18a36379e075ad3f52c8513a02841f85",
-    "url": "./static/js/2.82bc7c36.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.7f280ed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3a680e537db2919e2889",
-    "url": "./static/js/main.9bccb47b.chunk.js"
+    "revision": "8dab56448665586bc012",
+    "url": "./static/js/main.fd947d34.chunk.js"
   },
   {
     "revision": "5561a4792d5dc28a2d6e",
     "url": "./static/js/runtime-main.d9e7314b.js"
+  },
+  {
+    "revision": "bf75f6715fd78d203dc1588da56102a6",
+    "url": "./static/media/1st_alloy_ios.bf75f671.png"
   },
   {
     "revision": "e24ecba095051849f8c56c87f9e2a24d",
@@ -110,6 +114,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "11a397e701235917b859598af502a844",
     "url": "./static/media/cloud.11a397e7.png"
+  },
+  {
+    "revision": "6ea2b80027e20948aa9b434f67b7e766",
+    "url": "./static/media/exhibition_am_projected.6ea2b800.png"
   },
   {
     "revision": "10edafac91e1d666264c8effd12fd38b",
@@ -212,11 +220,23 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/fa-solid-900.eb397dfa.eot"
   },
   {
+    "revision": "368112037afb4a20b64956274b11818e",
+    "url": "./static/media/honorable_mention_u_of_r.36811203.png"
+  },
+  {
     "revision": "c1541633a720d1058216d8ea8e613b51",
     "url": "./static/media/map.c1541633.png"
   },
   {
     "revision": "d24c1a5faa098c2119ec3b7f4f4f4edd",
     "url": "./static/media/screenie_schedule (1).d24c1a5f.jpeg"
+  },
+  {
+    "revision": "dee494a16c61e70ec32e782269f51108",
+    "url": "./static/media/speaker_wwjc.dee494a1.png"
+  },
+  {
+    "revision": "f04607b4bbf96cf4f9e1e9689a219881",
+    "url": "./static/media/winner_gollin_film.f04607b4.png"
   }
 ]);

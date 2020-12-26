@@ -114,7 +114,7 @@ const DefaultNewsletterJumbotronModel = {
   },
   right: {
     header: 'Subscribe To Our Newsletter',
-    body: "Don't lose a chance to be among the first to know about our upcoming news and updates."
+    body: "Get exclusive offers and learn about our upcoming projects, new services, and seasonal updates."
   }
 };
 

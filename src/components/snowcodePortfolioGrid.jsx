@@ -14,6 +14,12 @@ import there from '../img/Screen Shot 2020-09-03 at 3.51.59 PM.png';
 import keysmith from '../img/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.png';
 import submarine from '../img/460x0w.png';
 
+import award_alloy from '../img/1st_alloy_ios.png';
+import award_speaker_wwjc from '../img/speaker_wwjc.png';
+import award_winner_gollin_film from '../img/winner_gollin_film.png';
+import award_exhibition_am_projected from '../img/exhibition_am_projected.png';
+import award_honorable_mention_u_of_r from '../img/honorable_mention_u_of_r.png';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     // minHeight: '400px',
@@ -63,6 +69,38 @@ const useStyles = makeStyles((theme) => ({
     marginRight: 'auto',
     textAlign: 'center',
     paddingBottom: 20
+  },
+
+  textPanelHeader: {
+    fontSize: '0.7rem',
+    fontWeight: 700,
+    color: 'rgba(0,0,0,0.4)'
+  },
+
+  recognition: {
+    maxWidth: '900px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    paddingTop: '50px',
+    lineHeight: 0
+  },
+  
+  awards: {
+    opacity: 0.35,
+    textAlign: 'center',
+    paddingBottom: '12px',
+    paddingTop: '40px',
+    userSelect: 'none',
+    pointerEvents: 'none',
+
+    '& > img': {
+      display: 'inline',
+      width: 146,
+      height: 'auto',
+      paddingLeft: 0,
+      paddingRight: '14px',
+      objectFit: 'contain'
+    }
   }
 }));
 
@@ -135,6 +173,17 @@ export default function SnowcodePortfolioGrid() {
     )
   });
 
+  const awardItems = [award_alloy, 
+    award_exhibition_am_projected,
+    award_winner_gollin_film,
+    award_speaker_wwjc,
+    award_honorable_mention_u_of_r]
+    .map(item => {
+      return (
+        <img alt="Award" src={item} />
+      );
+  });
+
   return (
     <div className={classes.root}>
       <div className={classes.container}>
@@ -152,6 +201,17 @@ export default function SnowcodePortfolioGrid() {
 
         <div className={classes.grid}>
           { portfolioCards }
+        </div>
+      </div>
+
+      
+      <div className={classes.recognition}>
+        <div className={classes.textPanelHeader}>
+          RECOGNITION
+        </div>
+
+        <div className={classes.awards}>
+          { awardItems }
         </div>
       </div>
     </div>

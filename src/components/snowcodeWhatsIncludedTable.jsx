@@ -59,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
     display: 'inline-block',
     height: '30px',
     margin: 10,
+    textAlign: 'left'
   },
   featureImage: {
     display: 'inline',
@@ -94,7 +95,12 @@ const useStyles = makeStyles((theme) => ({
 
   platformCell: {
     display: 'inline',
-    padding: 30
+    padding: 15,
+
+    [theme.breakpoints.up(522)]: {
+      paddingLeft: 30,
+      paddingRight: 30
+    }
   },
 
   platformImage: {
