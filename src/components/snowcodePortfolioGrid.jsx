@@ -13,6 +13,9 @@ import sundial from '../img/Screen Shot 2020-08-27 at 9.00.35 PM.png';
 import there from '../img/Screen Shot 2020-09-03 at 3.51.59 PM.png';
 import keysmith from '../img/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.png';
 import submarine from '../img/460x0w.png';
+import sammy from '../img/sammy.png';
+import iggie from '../img/iggie.png';
+import carrots from '../img/carrots.png';
 
 import award_alloy from '../img/1st_alloy_ios.png';
 import award_speaker_wwjc from '../img/speaker_wwjc.png';
@@ -109,6 +112,12 @@ export default function SnowcodePortfolioGrid() {
   const theme = useTheme();
 
   const portfolioItems = [{
+    image: sammy,
+    caption: '',
+    title: 'sammy.best',
+    subtitle: "🥪 d2c immersive 3d sandwich printer",
+    button: "https://sammy.best"
+  }, {
     image: leaf,
     caption: '',
     title: 'myleaf.fun',
@@ -118,7 +127,7 @@ export default function SnowcodePortfolioGrid() {
     image: submarine,
     caption: '',
     title: 'Submarine Two',
-    subtitle: '🎉 our reddit app without compromises',
+    subtitle: '🎉 reddit app without compromises',
     button: 'https://submarineforios.com/'
   }, {
     image: sundial,
@@ -131,7 +140,7 @@ export default function SnowcodePortfolioGrid() {
     caption: '',
     title: 'there.click',
     subtitle: '🐲 keep track of everything webapp',
-    button: 'https://there.click'
+    button: 'http://there.click'
   }, {
     image: jillaweiss,
     caption: '',
@@ -144,6 +153,12 @@ export default function SnowcodePortfolioGrid() {
     title: 'gardenguide.fun',
     subtitle: "💐 flower breeding & growing guide",
     button: "http://gardenguide.fun"
+  }, {
+    image: carrots,
+    caption: '',
+    title: 'carrots',
+    subtitle: '🥕 carrots to feed your friends',
+    button: 'https://github.com/SnowcodeDesign/carrots'
   }, {
     image: exefel,
     caption: '',
@@ -162,7 +177,14 @@ export default function SnowcodePortfolioGrid() {
     title: 'julian.coffee',
     subtitle: '☕ python bot that crawls venmo',
     button: 'https://github.com/SnowcodeDesign/julian.coffee'
+  }, {
+    image: iggie,
+    caption: '',
+    title: 'iggie.site',
+    subtitle: '🤖 interactive github site history',
+    button: 'http://iggie.site/'
   }];
+
   const portfolioCards = portfolioItems.map(item => {
     return (
       <a href={ item.button } target="_blank" rel="noopener noreferrer">

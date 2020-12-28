@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "./static/css/main.e4a45287.chunk.css",
-    "main.js": "./static/js/main.fd947d34.chunk.js",
-    "main.js.map": "./static/js/main.fd947d34.chunk.js.map",
+    "main.js": "./static/js/main.41c5a68a.chunk.js",
+    "main.js.map": "./static/js/main.41c5a68a.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d9e7314b.js",
     "runtime-main.js.map": "./static/js/runtime-main.d9e7314b.js.map",
     "static/css/2.835d4cfd.chunk.css": "./static/css/2.835d4cfd.chunk.css",
-    "static/js/2.7f280ed5.chunk.js": "./static/js/2.7f280ed5.chunk.js",
-    "static/js/2.7f280ed5.chunk.js.map": "./static/js/2.7f280ed5.chunk.js.map",
+    "static/js/2.9f43b77c.chunk.js": "./static/js/2.9f43b77c.chunk.js",
+    "static/js/2.9f43b77c.chunk.js.map": "./static/js/2.9f43b77c.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.823637093b67f38ab665744bd438da90.js": "./precache-manifest.823637093b67f38ab665744bd438da90.js",
+    "precache-manifest.c7571d0804f99a8536ba134e4b24bccc.js": "./precache-manifest.c7571d0804f99a8536ba134e4b24bccc.js",
     "service-worker.js": "./service-worker.js",
     "static/css/2.835d4cfd.chunk.css.map": "./static/css/2.835d4cfd.chunk.css.map",
     "static/css/main.e4a45287.chunk.css.map": "./static/css/main.e4a45287.chunk.css.map",
-    "static/js/2.7f280ed5.chunk.js.LICENSE.txt": "./static/js/2.7f280ed5.chunk.js.LICENSE.txt",
+    "static/js/2.9f43b77c.chunk.js.LICENSE.txt": "./static/js/2.9f43b77c.chunk.js.LICENSE.txt",
     "static/media/1st_alloy_ios.png": "./static/media/1st_alloy_ios.bf75f671.png",
     "static/media/460x0w.png": "./static/media/460x0w.e24ecba0.png",
     "static/media/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.png": "./static/media/91617807-d6e4ce80-e956-11ea-84f8-cbe9896925ad.f5711515.png",
@@ -30,7 +30,9 @@
     "static/media/exhibition_am_projected.png": "./static/media/exhibition_am_projected.6ea2b800.png",
     "static/media/all.css": "./static/media/fa-solid-900.eb397dfa.eot",
     "static/media/honorable_mention_u_of_r.png": "./static/media/honorable_mention_u_of_r.36811203.png",
+    "static/media/iggie.png": "./static/media/iggie.b0d54156.png",
     "static/media/map.png": "./static/media/map.c1541633.png",
+    "static/media/sammy.png": "./static/media/sammy.8c39a8d2.png",
     "static/media/screenie_schedule (1).jpeg": "./static/media/screenie_schedule (1).d24c1a5f.jpeg",
     "static/media/speaker_wwjc.png": "./static/media/speaker_wwjc.dee494a1.png",
     "static/media/winner_gollin_film.png": "./static/media/winner_gollin_film.f04607b4.png"
@@ -38,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.d9e7314b.js",
     "static/css/2.835d4cfd.chunk.css",
-    "static/js/2.7f280ed5.chunk.js",
+    "static/js/2.9f43b77c.chunk.js",
     "static/css/main.e4a45287.chunk.css",
-    "static/js/main.fd947d34.chunk.js"
+    "static/js/main.41c5a68a.chunk.js"
   ]
 }
