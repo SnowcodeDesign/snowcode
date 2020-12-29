@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 50,
     paddingBottom: 20,
 
-    '& > * > a': {
+    '& > * > * > a': {
       color: 'inherit',
       textDecoration: 'none'
     }
@@ -24,7 +24,9 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 'auto',
     marginRight: 'auto',
     transform: 'rotate(20deg)',
-    opacity: 0.2
+    opacity: 0.2,
+    pointerEvents: 'none',
+    userSelect: 'none'
   },
   footer: {
     fontSize: '0.8rem',
@@ -61,19 +63,24 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
       <center>
         <img className={ classes.image } src={ rochesterLogo } alt="Rochester" />
 
-        <a target='_blank' href="https://github.com/SnowcodeDesign/snowcode" rel="noopener noreferrer">
-          <Tooltip title={ composedTooltipString } arrow placement="top">
             <div className={classes.footer}>
-              Made with <img alt="love" className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
-              <br/>
-              &copy; 2020 Snowcode, LLC
+              <a target='_blank' href="https://github.com/SnowcodeDesign/snowcode" rel="noopener noreferrer">
+                <Tooltip title={ composedTooltipString } arrow placement="top">
+                  <span>
+                  Made with <img alt="love" className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
+                  <br/>
+                  &copy; 2020 Snowcode, LLC
+                  </span>
+                </Tooltip>
+              </a>
 
-              <div className={classes.attribution}>
-              The following organization and/or company trademarks and/or copyrighted icons are used to represent their respective organizations and/or companies and are not meant to represent any affiliation or connection between Snowcode, LLC and said organizations or companies: Apple (Apple, Inc), Windows (Microsoft), Google Play (Google), Chrome (Google), Ubuntu, Github, Discord, Slack, Amazon, Swift (Apple, Inc), Javascript, Python, Kotlin, HTML5, CSS3, PHP, PHP, Java, C++, Vue.js, React.js, Squarespace, Wix, Wordpress, Weebly, Bootstrap, Angular, Node.js, Sketch, Buffer, Atlassian, Docker, Phaser, Algolia, Invision, Markdown, Jenkins, Less, NPM, cPanel, Yarn, Intercom, Foursquare, Gitlab, Reddit, Shopify, Salesforce, Mailchimp, Spotify, Stripe, Paypal, Yelp, StackOverflow, Twitch, Behance, Dribbble, Instagram (Facebook), AngelList, LinkedIn, Product Hunt, Twitter, Tumblr, Soundcloud, Bandcamp, Last.fm. These marks and/or brand images are not owned by Snowcode, LLC and are instead owned by their respective organizations and/or companies as listed above, registered in the U.S. and other countries. If anyone wishes to have a mark removed, please reach out immediately. Thanks so much! :)
-              </div>
+              { !useDark ? '' : (
+                <div className={classes.attribution}>
+                The following organization and/or company trademarks and/or copyrighted icons are used to represent their respective organizations and/or companies and are not meant to represent any affiliation or connection between Snowcode, LLC and said organizations or companies: Apple (Apple, Inc), Windows (Microsoft), Google Play (Google), Chrome (Google), Ubuntu, Github, Discord, Slack, Amazon, Swift (Apple, Inc), Javascript, Python, Kotlin, HTML5, CSS3, PHP, PHP, Java, C++, Vue.js, React.js, Squarespace, Wix, Wordpress, Weebly, Bootstrap, Angular, Node.js, Sketch, Buffer, Atlassian, Docker, Phaser, Algolia, Invision, Markdown, Jenkins, Less, NPM, cPanel, Yarn, Intercom, Foursquare, Gitlab, Reddit, Shopify, Salesforce, Mailchimp, Spotify, Stripe, Paypal, Yelp, StackOverflow, Twitch, Behance, Dribbble, Instagram (Facebook), AngelList, LinkedIn, Product Hunt, Twitter, Tumblr, Soundcloud, Bandcamp, Last.fm, MaterialUI, FontAwesome, the City of Rochester. These marks and/or brand images are not owned by Snowcode, LLC and are instead owned by their respective organizations and/or companies as listed above, registered in the U.S. and other countries. If anyone wishes to have a mark removed, please reach out immediately. Thanks so much! :)
+                </div>
+              )}
+
             </div>
-          </Tooltip>
-          </a>
       </center>
     </div>
   );

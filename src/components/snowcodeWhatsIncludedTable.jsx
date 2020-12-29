@@ -5,12 +5,12 @@ import Button from '@material-ui/core/Button';
 import VideocamIcon from '@material-ui/icons/Videocam';
 import CropFreeIcon from '@material-ui/icons/CropFree';
 import CreateIcon from '@material-ui/icons/Create';
-import MicIcon from '@material-ui/icons/Mic';
 import StorageIcon from '@material-ui/icons/Storage';
 import BugReportIcon from '@material-ui/icons/BugReport';
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import AppleIcon from '@material-ui/icons/Apple';
 import TwitterIcon from '@material-ui/icons/Twitter';
+import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,7 +67,11 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: 'top',
     color: theme.palette.secondary.main
   },
-
+  featureText: {
+    verticalAlign: 'top',
+    lineHeight: 1,
+    paddingTop: 6
+  },
 
   platforms: {
     padding: 0,
@@ -149,8 +153,8 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     image: <VideocamIcon/>,
     text: 'Video Production'
   }, {
-    image: <MicIcon/>,
-    text: 'Audio Engineering'
+    image: <SportsEsportsIcon/>,
+    text: 'Game Development'
   }, {
     image: <BugReportIcon/>,
     text: 'Production Testing'
@@ -180,7 +184,7 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
                   {f.image}
                 </div>
               </td>
-              <td>
+              <td className={classes.featureText}>
                 { f.text }
               </td>
             </tr>
