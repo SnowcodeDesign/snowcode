@@ -69,7 +69,7 @@ export default function SnowcodeRochesterLogo({ theme, useDark=false }) {
                   <span>
                   Made with <img alt="love" className={classes.footerImage} src={ useDark === true ? philadelphiaLogo : philadelphiaDarkerLogo } /> in Rochester, NY
                   <br/>
-                  &copy; 2020 Snowcode, LLC
+                  &copy; 2020-2021 Snowcode, LLC
                   </span>
                 </Tooltip>
               </a>

@@ -162,7 +162,7 @@ export default function SnowcodeSocialMediaLinks() {
 
 
               <td className={classes.iconCell}>
-                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UCq-bTk7aD-2uPves0XU-K7A" target="_blank" rel="noopener noreferrer">
                   <i class="fab fa-youtube-square"></i>
                 </a>
               </td>
@@ -308,7 +308,7 @@ export default function SnowcodeSocialMediaLinks() {
 
             <tr className={classes.linkRow}>
               <td className={classes.linkCell}>
-                <a href="https://www.youtube.com/channel/UCg6wT2Sa-Pa2UsR8GHzLojg" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/channel/UCq-bTk7aD-2uPves0XU-K7A" target="_blank" rel="noopener noreferrer">
                   YouTube
                 </a>
               </td>

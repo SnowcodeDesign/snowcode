@@ -130,7 +130,7 @@ export default function SnowcodeFeaturesGrid({ theme }) {
      { gridCellComponents }
     </div>
   );
-  
+
   return (
     <div className={classes.root}>
       { headerComponent }

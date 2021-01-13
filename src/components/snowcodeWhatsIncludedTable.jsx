@@ -137,6 +137,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down(915)]: {
       display: 'none',
     },
+  },
+
+  video: {
+    marginTop: 60,
+    marginBottom: 30,
+
+    width: 560,
+    height: 315,
+
+    [theme.breakpoints.down(615)]: {
+      width: '100%',
+      height: 300
+    }
   }
 }));
 
@@ -550,6 +563,10 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
     </div>
   );
 
+  const videoComponent = (
+    <center><iframe title="Bring your work to life" className={classes.video} src="https://www.youtube.com/embed/g1dDHATSQFM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+  );
+  
   return (
     <div className={classes.root}>
       <table className={classes.rootTable}>
@@ -572,6 +589,8 @@ export default function SnowcodeWhatsIncludedTable({ onContactUsClick }) {
           </tr>
         </tbody>
       </table>
+
+      { videoComponent }
 
       { platformsComponent }
     </div>
